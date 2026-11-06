@@ -190,6 +190,28 @@ img, svg { max-width: 100%; }
 .sentence-sub.cover.covered::after { content: "👁 Bấm để xem pinyin + dịch nghĩa"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #6b7280; font-size: 13px; font-weight: 600; }
 /* --- Nghĩa tiếng Việt của từ mới (ngay dưới tiêu đề thẻ từ) --- */
 .word-meaning { font-size: 15px; color: #1e293b; margin: 2px 0 10px; }
+/* --- Bài 7 Đọc hiểu: đoạn văn dạng đoạn liền mạch + thẻ câu hỏi (mẫu HSK 3) --- */
+.read-para { background: #fffdf6; border: 1px solid #eadfc8; border-radius: 12px; padding: 14px 16px; margin: 12px 0; }
+/* --- Bỏ viền trái màu đậm, chỉ tô màu nền (theo ý anh 06/11) --- */
+.mn { border: 1px solid #f5d9a8; border-left: none; }
+.colloc { border: 1px solid #bbf7d0; border-left: none; }
+.reveal { border: 1px solid #bfdbfe; border-left: none; }
+.reading-box { background: #eff6ff; border-left: none; }
+/* --- Chỗ trống điền từ hiển thị dạng "......" không gạch chân, bấm vào mới hiện danh sách từ (theo ý anh 06/11) --- */
+.cloze-select { border: none; border-radius: 0; background: transparent; padding: 3px 2px; min-width: 90px; text-align: center; appearance: none; -webkit-appearance: none; }
+.cloze-select::-ms-expand { display: none; }
+/* --- Bài 4 Ngữ pháp mới: hộp giới thiệu điểm ngữ pháp + ví dụ (theo ý anh 06/11) --- */
+.gram-intro { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 12px 14px; margin: 10px 0; line-height: 1.7; }
+.gram-ex { margin: 8px 0; font-size: 16px; line-height: 1.9; }
+.gram-blank { font-weight: 700; letter-spacing: 1px; }
+.read-para-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.read-para-text { font-size: 19px; line-height: 2.15; text-align: justify; text-indent: 2em; margin: 0; color: #1e293b; }
+.read-para-trans { margin: 10px 0; font-size: 14px; color: #475569; line-height: 1.65; }
+.read-para-trans b { color: #92400e; }
+.read-para-trans p { margin: 2px 0 0; }
+.read-q { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px 16px; margin: 12px 0; }
+.read-q-head { display: flex; gap: 10px; align-items: flex-start; font-size: 15.5px; font-weight: 600; margin-bottom: 6px; }
+.read-q-num { flex: none; width: 26px; height: 26px; border-radius: 50%; background: #2563eb; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-top: 1px; }
 
 .dlg-line{padding:8px 10px;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:8px;background:#fff}
 .dlg-sp{display:inline-block;padding:2px 9px;border-radius:12px;color:#fff;font-weight:700;font-size:13px;margin-right:8px;vertical-align:middle}
@@ -198,7 +220,18 @@ img, svg { max-width: 100%; }
 .dlg-zh.hide-ruby rt{display:none}
 .dlg-vi{color:#64748b;font-size:14px;margin:2px 0 0 30px}
 .dlg-voice-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0}
-.dlg-voice-row select{max-width:100%;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
+.dlg-voice-row select{flex:1;min-width:120px;max-width:100%;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
+/* --- Nút điều khiển Bài 8 gọn: chỉ icon, không chữ; tốc độ cùng hàng (theo ý anh 06/11) --- */
+.dlg-controls-row input[type=range]{flex:1;min-width:60px;vertical-align:middle}
+.dlg-controls-row input[type=number]{width:64px;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
+.dlg-play-btn{font-size:16px;padding:5px 12px;min-width:44px}
+.dlg-icon-btn.dlg-btn-on{background:#dbeafe;border-color:#93c5fd}
+.dlg-pinyin-btn{font-weight:700;border-radius:6px;padding:4px 10px;cursor:pointer}
+.dlg-pinyin-btn.on{background:#2563eb;color:#fff;border:1px solid #2563eb}
+.dlg-pinyin-btn.off{background:#e5e7eb;color:#6b7280;border:1px solid #d1d5db}
+
+.tts-voice-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0}
+.tts-voice-row select{flex:1;min-width:120px;max-width:100%;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
 </style>
 </head>
 <body>
@@ -587,20 +620,28 @@ img, svg { max-width: 100%; }
 <div class="feedback" id="match-feedback" style="margin-top:10px;"></div>
 </div>
 <div class="card">
-<h2>⚖️ Bài 4: Bắt lỗi ngữ pháp Cao cấp 4 <span class="badge">Tránh bẫy phòng thi</span></h2>
-<div class="sub" style="margin-bottom:8px;">Mỗi cặp dưới đây chỉ có <b>1 câu đúng ngữ pháp</b> (đã ẩn ký hiệu gợi ý). Hãy chọn câu đúng:</div>
+<h2>⚖️ Bài 4: Ngữ pháp — 要多……有多…… — …vô cùng <span class="badge">Điểm ngữ pháp hôm nay</span></h2>
+<div class="gram-intro">
+<div><b>Công thức:</b> 要多 + Adj/V + 有多 + Adj/V</div>
+<div>Ôn: 要多……有多…… thứ tự không đổi.</div>
+</div>
+<div class="sub" style="margin-bottom:8px;">Nghe 2 ví dụ rồi làm 2 bài tập dưới đây:</div>
+<div class="gram-ex"><button class="tts-btn" onclick="speakRate('学校要多大有多大。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>学<rt>Xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>大<rt>dà</rt></ruby>。</span> <span class="hint">(Trường to vô cùng.)</span></div>
+<div class="gram-ex"><button class="tts-btn" onclick="speakRate('他要多喜欢唱歌有多喜欢唱歌。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>。</span> <span class="hint">(Anh ấy thích hát vô cùng.)</span></div>
 <div class="q-item" id="gram-1">
-<div><b>1. Câu có 了 chỉ sự việc đã xảy ra:</b> (Tôi hôm qua đã mua đồ)</div>
+<div><b>1. Điền từ đúng vào chỗ trống:</b> 他要<span class="gram-blank">......</span>高兴有多高兴。</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'gram-1', '✓ Đúng! 了 ở cuối câu đánh dấu sự việc đã hoàn thành.')">A. 我昨天买了东西。</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'gram-1', '✗ Sai: việc đã xảy ra hôm qua cần 了 ở cuối câu — 我昨天买了东西 mới đúng.')">B. 我昨天买东西。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'gram-1', '✗ Chưa đúng. 要多……有多……: hai vế dùng cùng một tính từ, thứ tự không đổi.')">A. 很</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'gram-1', '✗ Chưa đúng. 要多……有多……: hai vế dùng cùng một tính từ, thứ tự không đổi.')">B. 非常</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'gram-1', '✓ Đúng! 要多……有多……: hai vế dùng cùng một tính từ, thứ tự không đổi.')">C. 多</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'gram-1', '✗ Chưa đúng. 要多……有多……: hai vế dùng cùng một tính từ, thứ tự không đổi.')">D. 最</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="gram-2">
-<div><b>2. So sánh với 比 không dùng 很:</b> (Đội Trung Quốc mạnh hơn đội Nhật Bản)</div>
+<div><b>2. 要多……有多…… (…vô cùng):</b></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'gram-2', '✗ Sai: câu so sánh 比 KHÔNG dùng 很 trước tính từ — bỏ 很 đi.')">A. 中国队比日本队很强。</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'gram-2', '✓ Đúng! Cấu trúc: A + 比 + B + tính từ, không thêm 很。')">B. 中国队比日本队强。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'gram-2', '✓ Đúng! 要多……有多…… thứ tự không đổi.')">A. 学校要多大有多大。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'gram-2', '✗ Sai: 要多 phải đứng trước, 有多 đứng sau — 学校要多大有多大 mới đúng.')">B. 学校多要大有多大。</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -608,11 +649,11 @@ img, svg { max-width: 100%; }
 <h2>📖 Bài 5: Hoàn thành đoạn văn ngắn <span class="badge">Điền từ vào chỗ trống</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chọn từ thích hợp điền vào đoạn văn — đoạn văn dùng cả 5 từ mới hôm nay:</div>
 <div class="cloze-passage" id="cloze-box">
-这个品牌很<select class="cloze-select" data-ans="普及"><option value="">-- chọn --</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>。
-这个大厨很<select class="cloze-select" data-ans="气派"><option value="">-- chọn --</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>。
-这个品牌在<select class="cloze-select" data-ans="前列"><option value="">-- chọn --</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>。
-这个品牌有<select class="cloze-select" data-ans="潜在"><option value="">-- chọn --</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>的利润。
-这个<select class="cloze-select" data-ans="群体"><option value="">-- chọn --</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>很密切。
+这个品牌很<select class="cloze-select" data-ans="普及"><option value="">......</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>。
+这个大厨很<select class="cloze-select" data-ans="气派"><option value="">......</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>。
+这个品牌在<select class="cloze-select" data-ans="前列"><option value="">......</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>。
+这个品牌有<select class="cloze-select" data-ans="潜在"><option value="">......</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>的利润。
+这个<select class="cloze-select" data-ans="群体"><option value="">......</option><option>普及</option><option>气派</option><option>前列</option><option>潜在</option><option>群体</option></select>很密切。
 </div>
 <div class="input-check" style="margin-top:10px;">
 <button class="btn-primary" onclick="checkCloze()">Kiểm tra đoạn văn</button>
@@ -621,22 +662,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="这个品牌很普及。">
-<div><b>Câu 1:</b> Thương hiệu này rất phổ biến.</div>
+<div class="scramble-box" id="scr-1" data-target="因为普及，所以我们要了解气派。">
+<div><b>Câu 1:</b> Vì phổ cập, nên chúng ta phải tìm hiểu khí phái.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="品牌|这个|很|普及|。"></div>
+<div class="word-bank" data-words="要|气派|我们|，|所以|因为|。|普及|了解"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="这个品牌在前列。">
-<div><b>Câu 2:</b> Thương hiệu này đứng trong tốp đầu.</div>
+<div class="scramble-box" id="scr-2" data-target="他觉得前列很有意思，也觉得潜在很有意思。">
+<div><b>Câu 2:</b> Anh ấy thấy hàng đầu rất thú vị, cũng thấy tiềm ẩn rất thú vị.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="。|在|品牌|前列|这个"></div>
+<div class="word-bank" data-words="前列|觉得|很|。|潜在|有意思|，|觉得|也|有意思|很|他"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="这个大厨很气派。">
-<div><b>Câu 3:</b> Đầu bếp này rất khí phái.</div>
+<div class="scramble-box" id="scr-3" data-target="朋友说，群体和普及都很有意思，我们要学习。">
+<div><b>Câu 3:</b> Bạn nói, nhóm người và phổ cập đều rất thú vị, chúng ta phải học tập.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="。|很|气派|大厨|这个"></div>
+<div class="word-bank" data-words="群体|学习|，|朋友|普及|说|和|要|我们|，|都|有意思|。|很"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -644,40 +685,51 @@ img, svg { max-width: 100%; }
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu Cao cấp 4</span></h2>
 <div class="sub" style="margin-bottom:8px;">Đọc đoạn văn dưới đây (dùng các từ mới hôm nay) rồi chọn đáp án đúng cho 3 câu hỏi bên dưới:</div>
 <div class="reading-box">
-<div class="reading-zh hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>普<rt>pǔ</rt></ruby><ruby>及<rt>jí</rt></ruby>。<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>厨<rt>chú</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>气<rt>qì</rt></ruby><ruby>派<rt>pài</rt></ruby>。<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>前<rt>qián</rt></ruby><ruby>列<rt>liè</rt></ruby>。<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>品<rt>pǐn</rt></ruby><ruby>牌<rt>pái</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>潜<rt>qián</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>利<rt>lì</rt></ruby><ruby>润<rt>rùn</rt></ruby>。<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>群<rt>qún</rt></ruby><ruby>体<rt>tǐ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>密<rt>mì</rt></ruby><ruby>切<rt>qiè</rt></ruby>。</div>
+<div class="tts-voice-row"><span class="hint"><b>Giọng đọc:</b></span> <select class="tts-voice-select" id="tts-voice-read" aria-label="Chọn giọng đọc tiếng Trung"></select> <button class="tts-btn" type="button" onclick="previewCommonVoice()">🔊 Nghe thử</button></div><div class="hint" id="tts-voice-note-read">Đang kiểm tra giọng đọc trên thiết bị…</div>
+<div class="reading-zh hide-ruby">
+<section class="read-para">
+<div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 0)">🔊 Nghe đoạn này</button></div>
+<p class="read-para-text"><ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>普<rt>pǔ</rt></ruby><ruby>及<rt>jí</rt></ruby>，<ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>意<rt>yì</rt></ruby><ruby>思<rt>si</rt></ruby>。 <ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>气<rt>qì</rt></ruby><ruby>派<rt>pài</rt></ruby>，<ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>他<rt>tā</rt></ruby>。 <ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby>，<ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>前<rt>qián</rt></ruby><ruby>列<rt>liè</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>重<rt>zhòng</rt></ruby><ruby>要<rt>yào</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby>。 <ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>潜<rt>qián</rt></ruby><ruby>在<rt>zài</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>意<rt>yì</rt></ruby><ruby>思<rt>si</rt></ruby>。 <ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>群<rt>qún</rt></ruby><ruby>体<rt>tǐ</rt></ruby>，<ruby>希<rt>xī</rt></ruby><ruby>望<rt>wàng</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>更<rt>gèng</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。</p>
+</section>
+</div>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["今天，我们在学校普及，觉得很有意思。他很气派，朋友都很喜欢他。今天，朋友说前列很重要，我们要学习。这个东西很潜在，我们都觉得很有意思。明天，我们还要学习群体，希望学得更好。"];</script>
 <div class="reading-Controls">
-<button class="tts-btn" onclick="speakRate('这个品牌很普及。这个大厨很气派。这个品牌在前列。这个品牌有潜在的利润。这个群体很密切。', 0.88)">🔊 Nghe đoạn văn</button>
-<button class="tts-btn" onclick="speakRate('这个品牌很普及。这个大厨很气派。这个品牌在前列。这个品牌有潜在的利润。这个群体很密切。', 0.62)">🐢 Nghe chậm</button>
+<button class="tts-btn" onclick="playChunked('read', 0.88)">▶️ Nghe đoạn văn</button>
+<button class="tts-btn" id="chunk-pause-read" onclick="toggleChunkPause('read')">⏸️ Tạm dừng</button>
+<button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
+<button class="tts-btn" onclick="playChunked('read', 0.6)">🐢 Nghe chậm</button>
 <button class="btn-sm" onclick="document.getElementById('read-help').classList.toggle('show')">👁️ Ẩn/Hiện Dịch nghĩa</button>
 <button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
 </div>
-<div class="reading-help" id="read-help"><div><b>Dịch nghĩa:</b> Thương hiệu này rất phổ biến. Đầu bếp này rất khí phái. Thương hiệu này đứng trong tốp đầu. Thương hiệu này có lợi nhuận tiềm ẩn. Nhóm này rất gắn bó.</div></div>
+<div class="reading-help" id="read-help">
+<div class="read-para-trans"><p>Hôm nay, chúng tôi phổ cập ở trường, cảm thấy rất thú vị. Anh ấy rất khí phái, bạn bè đều rất thích anh ấy. Hôm nay, bạn nói hàng đầu rất quan trọng, chúng ta phải học tập. Thứ này rất tiềm ẩn, chúng tôi đều cảm thấy rất thú vị. Ngày mai, chúng tôi còn phải học về nhóm người, hy vọng học tốt hơn.</p></div>
 </div>
-<div class="q-item" id="read-1">
-<div><b>Câu 1.</b> 普及 是什么意思？ <span class="hint">(“普及” nghĩa là gì?)</span></div>
-<div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 普及 (pǔjí) nghĩa là “phổ cập; phổ biến rộng rãi”.')">A. phổ cập; phổ biến rộng rãi</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 普及 nghĩa là “phổ cập; phổ biến rộng rãi”.')">B. khí phái; bề thế, sang trọng</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 普及 nghĩa là “phổ cập; phổ biến rộng rãi”.')">C. tiềm ẩn; tiềm tàng</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 普及 nghĩa là “phổ cập; phổ biến rộng rãi”.')">D. hàng đầu; tốp đầu</button>
 </div>
-<div class="feedback" style="margin-top:6px;"></div></div>
-<div class="q-item" id="read-2">
-<div><b>Câu 2.</b> 前列 是什么意思？ <span class="hint">(“前列” nghĩa là gì?)</span></div>
+<div class="q-item read-q" id="read-1">
+<div class="read-q-head"><span class="read-q-num">1</span><span>今天，我们在哪里普及？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 前列 (qiánliè) nghĩa là “hàng đầu; tốp đầu”.')">A. hàng đầu; tốp đầu</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 前列 nghĩa là “hàng đầu; tốp đầu”.')">B. phổ cập; phổ biến rộng rãi</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 前列 nghĩa là “hàng đầu; tốp đầu”.')">C. tiềm ẩn; tiềm tàng</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 前列 nghĩa là “hàng đầu; tốp đầu”.')">D. khí phái; bề thế, sang trọng</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 今天，我们在学校普及，觉得很有意思。')">A. 在家</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 今天，我们在学校普及，觉得很有意思。')">B. 在公园</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 今天，我们在学校普及，觉得很有意思。')">C. 在学校</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 今天，我们在学校普及，觉得很有意思。')">D. 在朋友家</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
-<div class="q-item" id="read-3">
-<div><b>Câu 3.</b> 哪个句子和这段话一样？ <span class="hint">(Câu nào giống với đoạn văn?)</span></div>
+<div class="q-item read-q" id="read-2">
+<div class="read-q-head"><span class="read-q-num">2</span><span>朋友说什么很重要？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: câu đó không có trong đoạn văn.')">A. 这个品牌在普及。</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 这个群体很密切。')">B. 这个群体很密切。</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: câu đó không có trong đoạn văn.')">C. 这个大厨很普及。</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: câu đó không có trong đoạn văn.')">D. 这个品牌很气派。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 今天，朋友说前列很重要，我们要学习。')">A. 前列</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 今天，朋友说前列很重要，我们要学习。')">B. 气派</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 今天，朋友说前列很重要，我们要学习。')">C. 普及</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 今天，朋友说前列很重要，我们要学习。')">D. 潜在</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item read-q" id="read-3">
+<div class="read-q-head"><span class="read-q-num">3</span><span>明天，我们还要做什么？</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 明天，我们还要学习群体，希望学得更好。')">A. 去学校</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 明天，我们还要学习群体，希望学得更好。')">B. 在家休息</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 明天，我们还要学习群体，希望学得更好。')">C. 学习普及</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 明天，我们还要学习群体，希望学得更好。')">D. 学习群体</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -685,70 +737,68 @@ img, svg { max-width: 100%; }
 <h2>🎧 Bài 8: Nghe hội thoại – Suy luận <span class="badge">Nghe hiểu Cao cấp 4</span></h2>
 <div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (12 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: 小明和小红谈论新手机在年轻人中的普及和一座新大楼。</div>
 <div class="reading-box">
-<div class="reading-Controls">
-<button class="tts-btn" onclick="playDlgAll()">▶️ Nghe cả đoạn hội thoại</button>
-<button class="tts-btn" id="dlg-pause-btn" onclick="toggleDlgPause()">⏸️ Tạm dừng</button>
-<button class="tts-btn" onclick="stopDlg()">⏹️ Dừng</button>
-<button class="btn-sm" id="dlg-toggle" onclick="toggleDlgScript()">👁️ Hiện lời thoại</button>
-<button class="btn-sm" onclick="toggleDlgRuby()">🔤 Ẩn/Hiện Pinyin</button>
-</div>
-<div style="margin-top:8px;"><span class="hint">Tốc độ:</span>
-<input type="range" id="dlg-speed-range" min="0.5" max="1.5" step="0.01" value="0.88" oninput="setDlgRateNum(this.value)" style="vertical-align:middle;width:160px">
-<input type="number" id="dlg-speed-num" min="0.5" max="1.5" step="0.05" value="0.88" onchange="setDlgRateNum(this.value)" style="width:70px;padding:4px 6px;border:1px solid #d1d5db;border-radius:6px;font-size:14px"> ×
+<div class="reading-Controls dlg-controls-row">
+<span class="hint">Tốc độ:</span>
+<input type="range" id="dlg-speed-range" min="0.5" max="1.5" step="0.01" value="0.88" oninput="setDlgRateNum(this.value)">
+<input type="number" id="dlg-speed-num" min="0.5" max="1.5" step="0.05" value="0.88" onchange="setDlgRateNum(this.value)">
+<button class="tts-btn dlg-play-btn" id="dlg-play-btn" onclick="toggleDlgPlay()" title="Nghe / Tạm dừng">▶️</button>
+<button class="tts-btn" onclick="restartDlg()" title="Nghe lại từ đầu">↺</button>
+<button class="btn-sm dlg-icon-btn" id="dlg-toggle" onclick="toggleDlgScript()" title="Hiện/Ẩn lời thoại">👁️</button>
+<button class="btn-sm dlg-pinyin-btn off" id="dlg-pinyin-btn" onclick="toggleDlgRuby()" title="Hiện/Ẩn Pinyin">Pinyin</button>
 </div>
 <div id="dlg-voice-pickers" style="margin-top:8px;"><span class="hint">Đang kiểm tra giọng đọc trên thiết bị…</span></div>
 <div class="hint" id="dlg-voice-note" style="margin-top:4px;"></div>
 <div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button> <button class="tts-btn" onclick="playDlgLine(8)">9</button> <button class="tts-btn" onclick="playDlgLine(9)">10</button> <button class="tts-btn" onclick="playDlgLine(10)">11</button> <button class="tts-btn" onclick="playDlgLine(11)">12</button></div>
 <div class="dlg-script" id="dlg-script" style="display:none">
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>Hóng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>看<rt>kàn</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>用<rt>yòng</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。</span><div class="dlg-vi">Tiểu Hồng, bạn xem, mọi người đều đang dùng điện thoại mới.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>新<rt>xīn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>普<rt>pǔ</rt></ruby><ruby>及<rt>jí</rt></ruby>，<ruby>年<rt>nián</rt></ruby><ruby>轻<rt>qīng</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby>。</span><div class="dlg-vi">Đúng vậy, điện thoại mới rất phổ biến, người trẻ đều thích.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>年<rt>Nián</rt></ruby><ruby>轻<rt>qīng</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>最<rt>zuì</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>群<rt>qún</rt></ruby><ruby>体<rt>tǐ</rt></ruby>。</span><div class="dlg-vi">Người trẻ là nhóm thích đồ mới nhất.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>对<rt>Duì</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>潜<rt>qián</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby>。</span><div class="dlg-vi">Đúng, họ cũng là những người tiềm năng mua điện thoại.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>楼<rt>lóu</rt></ruby>，<ruby>真<rt>zhēn</rt></ruby><ruby>气<rt>qì</rt></ruby><ruby>派<rt>pài</rt></ruby>！</span><div class="dlg-vi">Bạn xem tòa nhà mới kia, hoành tráng thật!</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>那<rt>nà</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>大<rt>dà</rt></ruby>。</span><div class="dlg-vi">Đúng vậy, đó là điện thoại mới, rất lớn.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>听<rt>Tīng</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>是<rt>shì</rt></ruby><ruby>前<rt>qián</rt></ruby><ruby>列<rt>liè</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。</span><div class="dlg-vi">Nghe nói chiếc điện thoại này rất tốt, là điện thoại hàng đầu.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>那<rt>Nà</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>看<rt>kan</rt></ruby>。</span><div class="dlg-vi">Thật không? Vậy chúng ta đi xem thử.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。</span><div class="dlg-vi">Được! Tôi cũng muốn mua một chiếc điện thoại mới.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>旧<rt>jiù</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>坏<rt>Huài</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Điện thoại cũ của bạn thì sao? Hỏng rồi à?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>没<rt>Méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>坏<rt>huài</rt></ruby>，<ruby>但<rt>dàn</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>慢<rt>màn</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>换<rt>huàn</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby>。</span><div class="dlg-vi">Không hỏng, nhưng quá chậm, tôi muốn đổi cái khác.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>，<ruby>那<rt>nà</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>看<rt>kan</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>楼<rt>lóu</rt></ruby>。</span><div class="dlg-vi">Được, vậy chúng ta cùng đi, bạn còn có thể xem tòa nhà mới.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>hóng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>看<rt>kàn</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>用<rt>yòng</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Tiểu Hồng, bạn xem, mọi người đều đang dùng điện thoại mới. Bạn thấy thế nào? Bạn có biết không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>新<rt>xīn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>普<rt>pǔ</rt></ruby><ruby>及<rt>jí</rt></ruby>，<ruby>年<rt>nián</rt></ruby><ruby>轻<rt>qīng</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby>。<ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Đúng vậy, điện thoại mới rất phổ biến, người trẻ đều thích. Thật không? Bạn thấy thế nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>年<rt>Nián</rt></ruby><ruby>轻<rt>qīng</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>最<rt>zuì</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xī</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>群<rt>qún</rt></ruby><ruby>体<rt>tǐ</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Người trẻ là nhóm thích đồ mới nhất. Bạn có biết không? Thật không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>对<rt>Duì</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>潜<rt>qián</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Đúng, họ cũng là những người tiềm năng mua điện thoại. Bạn thấy thế nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>楼<rt>lóu</rt></ruby>，<ruby>真<rt>zhēn</rt></ruby><ruby>气<rt>qì</rt></ruby><ruby>派<rt>pài</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Bạn xem tòa nhà mới kia, hoành tráng thật! Bạn có biết không? Thật không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>那<rt>nà</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>大<rt>dà</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Đúng vậy, đó là điện thoại mới, rất lớn. Bạn thấy thế nào? Bạn có biết không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>听<rt>Tīng</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>是<rt>shì</rt></ruby><ruby>前<rt>qián</rt></ruby><ruby>列<rt>liè</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。<ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Nghe nói chiếc điện thoại này rất tốt, là điện thoại hàng đầu. Thật không? Bạn thấy thế nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>那<rt>Nà</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>看<rt>kàn</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Thật không? Vậy chúng ta đi xem thử. Còn bạn thì sao? Bạn có biết không? Bạn thấy thế nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Được! Tôi cũng muốn mua một chiếc điện thoại mới. Còn bạn thì sao? Thật không? Bạn có biết không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>旧<rt>jiù</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>坏<rt>Huài</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Điện thoại cũ của bạn thì sao? Hỏng rồi à? Bạn thấy sao? Bạn có biết không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>没<rt>Méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>坏<rt>huài</rt></ruby>，<ruby>但<rt>dàn</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>慢<rt>màn</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>换<rt>huàn</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Không hỏng, nhưng quá chậm, tôi muốn đổi cái khác. Còn bạn thì sao? Thật không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>，<ruby>那<rt>nà</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>楼<rt>lóu</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Được, vậy chúng ta cùng đi, bạn còn có thể xem tòa nhà mới. Bạn thấy thế nào?</div></div>
 </div>
 <div class="hint" id="dlg-tip">💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.</div>
 </div>
 <div class="q-item" id="dlg-1">
-<div><b>Câu 1.</b> 新手机普及吗？ <span class="hint">(Điện thoại mới có phổ biến không？)</span></div>
+<div><b>Câu 1.</b> 新手机普及吗？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小红：是，新手机很普及，年轻人都喜欢。')">A. 很普及</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，新手机很普及，年轻人都喜欢。')">B. 不普及</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，新手机很普及，年轻人都喜欢。')">C. 没有人用</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，新手机很普及，年轻人都喜欢。')">D. 只有孩子用</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，新手机很普及，年轻人都喜欢。')">A. 只有孩子用</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，新手机很普及，年轻人都喜欢。')">B. 没有人用</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小红：是，新手机很普及，年轻人都喜欢。')">C. 很普及</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，新手机很普及，年轻人都喜欢。')">D. 不普及</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-2">
-<div><b>Câu 2.</b> 年轻人是潜在的什么人？ <span class="hint">(Người trẻ là đối tượng tiềm năng nào？)</span></div>
+<div><b>Câu 2.</b> 年轻人是潜在的什么人？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小红：对，他们也是潜在的买手机的人。')">A. 买手机的人</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：对，他们也是潜在的买手机的人。')">A. 学生</button>
 <button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：对，他们也是潜在的买手机的人。')">B. 服务员</button>
 <button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：对，他们也是潜在的买手机的人。')">C. 老板</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：对，他们也是潜在的买手机的人。')">D. 学生</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小红：对，他们也是潜在的买手机的人。')">D. 买手机的人</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-3">
-<div><b>Câu 3.</b> 这个手机怎么样？ <span class="hint">(Chiếc điện thoại này thế nào？)</span></div>
+<div><b>Câu 3.</b> 这个手机怎么样？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小明：听说这个手机很好，是前列的手机。')">A. 很好，是前列的手机</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：听说这个手机很好，是前列的手机。')">B. 不好，没有人买</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：听说这个手机很好，是前列的手机。')">C. 一般</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：听说这个手机很好，是前列的手机。')">A. 一般</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小明：听说这个手机很好，是前列的手机。')">B. 很好，是前列的手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：听说这个手机很好，是前列的手机。')">C. 不好，没有人买</button>
 <button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：听说这个手机很好，是前列的手机。')">D. 很贵</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-4">
-<div><b>Câu 4.</b> 小明为什么想买新手机？ <span class="hint">(Sao Tiểu Minh muốn mua điện thoại mới？)</span></div>
+<div><b>Câu 4.</b> 小明为什么想买新手机？</div>
 <div class="mc-options">
 <button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小明：没有坏，但是太慢了，我想换一个。')">A. 因为旧手机太慢了</button>
 <button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：没有坏，但是太慢了，我想换一个。')">B. 因为旧手机坏了</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：没有坏，但是太慢了，我想换一个。')">C. 因为新手机很便宜</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：没有坏，但是太慢了，我想换一个。')">D. 因为他有钱</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：没有坏，但是太慢了，我想换一个。')">C. 因为他有钱</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：没有坏，但是太慢了，我想换一个。')">D. 因为新手机很便宜</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -792,11 +842,11 @@ img, svg { max-width: 100%; }
 <p><b>Bài 2 (Nghe):</b> Câu 1: C — 这个品牌很普及。 &nbsp;|&nbsp; Câu 2: D — 这个品牌在前列。</p>
 <p><b>Bài phụ (Pinyin):</b> Câu 1: A — pǔjí &nbsp;|&nbsp; Câu 2: B — qìpài</p>
 <p><b>Bài 3 (Ghép cặp):</b> 普及 = pǔjí · 气派 = qìpài · 前列 = qiánliè · 潜在 = qiánzài · 群体 = qúntǐ</p>
-<p><b>Bài 4 (Ngữ pháp):</b> 1. A — 我昨天买了东西。 &nbsp;|&nbsp; 2. B — 中国队比日本队强。</p>
+<p><b>Bài 4 (Ngữ pháp):</b> 1. C — 多 &nbsp;|&nbsp; 2. A — 学校要多大有多大。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 普及 → 气派 → 前列 → 潜在 → 群体</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 这个品牌很普及。<br>2. 这个品牌在前列。<br>3. 这个大厨很气派。</p>
-<p><b>Bài 7 (Đọc hiểu):</b> 1. A — phổ cập; phổ biến rộng rãi &nbsp;|&nbsp; 2. A — hàng đầu; tốp đầu &nbsp;|&nbsp; 3. B — 这个群体很密切。</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. A — 很普及 &nbsp; 2. A — 买手机的人 &nbsp; 3. A — 很好，是前列的手机 &nbsp; 4. A — 因为旧手机太慢了</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 因为普及，所以我们要了解气派。<br>2. 他觉得前列很有意思，也觉得潜在很有意思。<br>3. 朋友说，群体和普及都很有意思，我们要学习。</p>
+<p><b>Bài 7 (Đọc hiểu):</b> 1. C — 在学校 &nbsp;|&nbsp; 2. A — 前列 &nbsp;|&nbsp; 3. D — 学习群体</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. C — 很普及 &nbsp; 2. D — 买手机的人 &nbsp; 3. B — 很好，是前列的手机 &nbsp; 4. A — 因为旧手机太慢了</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -876,12 +926,12 @@ var ITEM_INFO = {
     "qúntǐ — nhóm người; cộng đồng; quần thể"
   ],
   "gram-1": [
-    "Ngữ pháp 1 (Câu có 了 chỉ sự việc đã xảy ra)",
-    "A — 我昨天买了东西。"
+    "Ngữ pháp 1",
+    "C — 多"
   ],
   "gram-2": [
-    "Ngữ pháp 2 (So sánh với 比 không dùng 很)",
-    "B — 中国队比日本队强。"
+    "Ngữ pháp 2",
+    "A — 学校要多大有多大。"
   ],
   "cloze-task": [
     "Đoạn văn (5 chỗ trống)",
@@ -889,27 +939,27 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "这个品牌很普及。"
+    "因为普及，所以我们要了解气派。"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "这个品牌在前列。"
+    "他觉得前列很有意思，也觉得潜在很有意思。"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "这个大厨很气派。"
+    "朋友说，群体和普及都很有意思，我们要学习。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
-    "A — phổ cập; phổ biến rộng rãi"
+    "C — 在学校"
   ],
   "read-2": [
     "Đọc hiểu câu 2",
-    "A — hàng đầu; tốp đầu"
+    "A — 前列"
   ],
   "read-3": [
     "Đọc hiểu câu 3",
-    "B — 这个群体很密切。"
+    "D — 学习群体"
   ],
   "dlg-1": [
     "Nghe hội thoại 1 (新手机普及吗？)",
@@ -4105,11 +4155,13 @@ flashShuffleDeck(); flashRender();
 </script>
 <script>
 // ====== Bài 8: Nghe hội thoại ======
-var DLG_SPEAKERS = [{"id": "ming", "name": "小明", "py": "Xiǎo Míng", "gender": "nam", "vi": "Minh", "color": "#2563eb"}, {"id": "hong", "name": "小红", "py": "Xiǎo Hóng", "gender": "nữ", "vi": "Hồng", "color": "#db2777"}];
-var DLG_LINES = [{"sp": "ming", "zh": "小红，你看，大家都在用新手机。"}, {"sp": "hong", "zh": "是，新手机很普及，年轻人都喜欢。"}, {"sp": "ming", "zh": "年轻人是最喜欢新东西的群体。"}, {"sp": "hong", "zh": "对，他们也是潜在的买手机的人。"}, {"sp": "ming", "zh": "你看那个新大楼，真气派！"}, {"sp": "hong", "zh": "是，那是新的手机，很大。"}, {"sp": "ming", "zh": "听说这个手机很好，是前列的手机。"}, {"sp": "hong", "zh": "真的吗？那我们去看看。"}, {"sp": "ming", "zh": "好！我也想买一个新手机。"}, {"sp": "hong", "zh": "你的旧手机呢？坏了吗？"}, {"sp": "ming", "zh": "没有坏，但是太慢了，我想换一个。"}, {"sp": "hong", "zh": "好，那我们一起去，你还可以看看新大楼。"}];
+var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
+var DLG_LINES = [{"sp": "ming", "zh": "小红，你看，大家都在用新手机。你觉得怎么样？你知道吗？"}, {"sp": "hong", "zh": "是，新手机很普及，年轻人都喜欢。真的吗？你觉得怎么样？"}, {"sp": "ming", "zh": "年轻人是最喜欢新东西的群体。你知道吗？真的吗？"}, {"sp": "hong", "zh": "对，他们也是潜在的买手机的人。你觉得怎么样？"}, {"sp": "ming", "zh": "你看那个新大楼，真气派！你知道吗？真的吗？"}, {"sp": "hong", "zh": "是，那是新的手机，很大。你觉得怎么样？你知道吗？"}, {"sp": "ming", "zh": "听说这个手机很好，是前列的手机。真的吗？你觉得怎么样？"}, {"sp": "hong", "zh": "真的吗？那我们去看看。你呢？你知道吗？你觉得怎么样？"}, {"sp": "ming", "zh": "好！我也想买一个新手机。你呢？真的吗？你知道吗？"}, {"sp": "hong", "zh": "你的旧手机呢？坏了吗？你觉得呢？你知道吗？"}, {"sp": "ming", "zh": "没有坏，但是太慢了，我想换一个。你呢？真的吗？"}, {"sp": "hong", "zh": "好，那我们一起去，你还可以看看新大楼。你觉得怎么样？"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;
+var dlgIdx = 0; // câu hội thoại đang đọc / đang tạm dừng ở đó
+var dlgGen = 0; // tăng mỗi lần dừng/bắt đầu chuỗi mới: chuỗi cũ hết hiệu lực
 var DLG_VOICE_LS = 'dialogue-voices';
 var DLG_ZH_VOICES = [];
 function dlgVoiceKey(v) { return v.voiceURI || v.name; }
@@ -4183,7 +4235,7 @@ function buildVoicePickers() {
     var badge = document.createElement('span');
     badge.className = 'dlg-sp'; badge.style.background = s.color; badge.textContent = s.name;
     var lab = document.createElement('span');
-    lab.innerHTML = '<b>Giọng của ' + s.name + '</b> (' + s.vi + ' · ' + (s.gender === 'nam' ? 'Nam' : 'Nữ') + '):';
+    lab.textContent = '(' + s.vi + ' · ' + (s.gender === 'nam' ? 'Nam' : 'Nữ') + ')';
     var sel = document.createElement('select');
     sel.id = 'dlg-voice-' + s.id;
     DLG_ZH_VOICES.forEach(function (v) {
@@ -4238,29 +4290,51 @@ function dlgSpeak(i, onDone) {
   u.onerror = function () { if (onDone) onDone(); };
   window.speechSynthesis.speak(u);
 }
-function playDlgAll() {
+function playDlgAllFrom(start) {
   if (!('speechSynthesis' in window)) return;
   stopDlg();
   dlgPlaying = true;
-  var i = 0;
+  dlgPaused = false;
+  dlgIdx = (typeof start === 'number') ? start : 0;
+  var gen = ++dlgGen;
   (function next() {
-    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; dlgPaused = false; updateDlgPauseBtn(); return; }
-    dlgSpeak(i, function () { i++; if (dlgPlaying) next(); });
+    if (gen !== dlgGen || !dlgPlaying || dlgIdx >= DLG_LINES.length) {
+      if (gen === dlgGen) { dlgPlaying = false; dlgPaused = false; updateDlgPlayBtn(); }
+      return;
+    }
+    dlgSpeak(dlgIdx, function () {
+      if (gen !== dlgGen || !dlgPlaying) return;
+      dlgIdx++;
+      next();
+    });
   })();
+  updateDlgPlayBtn();
 }
-function updateDlgPauseBtn() {
-  var b = document.getElementById('dlg-pause-btn');
-  if (b) b.textContent = dlgPaused ? '▶️ Tiếp tục nghe' : '⏸️ Tạm dừng';
+function playDlgAll() { playDlgAllFrom(0); }
+function updateDlgPlayBtn() {
+  var b = document.getElementById('dlg-play-btn');
+  if (b) b.textContent = (dlgPlaying && !dlgPaused) ? '⏸️' : '▶️';
 }
-function toggleDlgPause() {
+function toggleDlgPlay() {
   if (!('speechSynthesis' in window)) return;
-  var ss = window.speechSynthesis;
-  if (ss.paused) { ss.resume(); dlgPaused = false; }
-  else if (ss.speaking) { ss.pause(); dlgPaused = true; }
-  else return;
-  updateDlgPauseBtn();
+  if (dlgPlaying && !dlgPaused) {
+    // Tạm dừng: hủy utterance đang đọc, nhớ vị trí (đọc tiếp sẽ đọc lại
+    // từ đầu câu đang dở). KHÔNG dùng pause()/resume(): trên Chrome/Android
+    // resume() sau pause() thường không đọc tiếp, chuỗi hội thoại chết hẳn.
+    var cur = dlgIdx;
+    stopDlg();
+    dlgIdx = cur;
+    dlgPaused = true;
+    updateDlgPlayBtn();
+  } else if (dlgPaused) {
+    // Đọc tiếp từ câu đang dừng.
+    playDlgAllFrom(dlgIdx);
+  } else {
+    playDlgAll();
+  }
 }
-function stopDlg() { dlgPlaying = false; dlgPaused = false; if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); } updateDlgPauseBtn(); }
+function restartDlg() { playDlgAll(); updateDlgPlayBtn(); }
+function stopDlg() { dlgGen++; dlgPlaying = false; dlgPaused = false; if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); } updateDlgPlayBtn(); }
 function playDlgLine(i) { stopDlg(); dlgSpeak(i); }
 function previewDlgVoice(spId) {
   for (var i = 0; i < DLG_LINES.length; i++)
@@ -4271,12 +4345,253 @@ function toggleDlgScript() {
   var btn = document.getElementById('dlg-toggle');
   var show = el.style.display === 'none';
   el.style.display = show ? 'block' : 'none';
-  btn.textContent = show ? '🙈 Ẩn lời thoại' : '👁️ Hiện lời thoại';
+  if (btn) btn.classList.toggle('dlg-btn-on', show);
 }
 function toggleDlgRuby() {
   var els = document.querySelectorAll('.dlg-zh');
   for (var k = 0; k < els.length; k++) els[k].classList.toggle('hide-ruby');
+  var btn = document.getElementById('dlg-pinyin-btn');
+  if (btn) {
+    var first = document.querySelector('.dlg-zh');
+    var on = first && !first.classList.contains('hide-ruby');
+    btn.classList.toggle('on', !!on);
+    btn.classList.toggle('off', !on);
+  }
 }
+</script>
+
+<script>
+// ====== Giọng đọc chung + Nghe theo đoạn (chunked TTS) ======
+// Ghi đè speak()/speakRate() của file mẫu: mọi lần đọc lẻ đều dùng giọng
+// chung đã chọn (localStorage 'tts-voice'). Bài 8 không dùng 2 hàm này
+// (nó dùng dlgSpeak + giọng riêng theo nhân vật) nên không bị ảnh hưởng.
+var TTS_VOICE_LS = 'tts-voice';
+var TTS_ZH_VOICES = [];
+// Các chunk do từng thẻ nghe khai báo trước đó:
+//   window.CHUNK_DATA['story'] = [<cảnh 1>, ...]; window.CHUNK_DATA['read'] = [<nhóm câu 1>, ...]
+var CHUNK_DATA = window.CHUNK_DATA || {};
+window.CHUNK_DATA = CHUNK_DATA;
+
+function ttsVoiceKey(v) { return v.voiceURI || v.name; }
+function ttsSavedVoiceKey() {
+  try { return localStorage.getItem(TTS_VOICE_LS) || ''; } catch (e) { return ''; }
+}
+function ttsVoiceFor() {
+  var saved = ttsSavedVoiceKey();
+  for (var i = 0; i < TTS_ZH_VOICES.length; i++)
+    if (ttsVoiceKey(TTS_ZH_VOICES[i]) === saved) return TTS_ZH_VOICES[i];
+  return TTS_ZH_VOICES.length ? TTS_ZH_VOICES[0] : null;
+}
+function ttsVoiceNote() {
+  var cur = ttsVoiceFor();
+  var txt;
+  if (!TTS_ZH_VOICES.length) txt = 'Thiết bị chưa tìm thấy giọng tiếng Trung — sẽ dùng giọng mặc định.';
+  else if (TTS_ZH_VOICES.length === 1) txt = 'Giọng đang dùng: ' + cur.name + '. Thiết bị chỉ có 1 giọng tiếng Trung.';
+  else txt = 'Giọng đang dùng: ' + cur.name + ' (' + TTS_ZH_VOICES.length + ' giọng tiếng Trung trên thiết bị).';
+  var notes = document.querySelectorAll('[id^="tts-voice-note-"]');
+  for (var k = 0; k < notes.length; k++) notes[k].textContent = txt;
+}
+function buildCommonVoicePickers() {
+  var sels = document.querySelectorAll('.tts-voice-select');
+  if (!sels.length) { ttsVoiceNote(); return; }
+  for (var s = 0; s < sels.length; s++) {
+    var sel = sels[s];
+    sel.innerHTML = '';
+    if (!('speechSynthesis' in window) || !TTS_ZH_VOICES.length) {
+      var o = document.createElement('option');
+      o.value = ''; o.textContent = 'Giọng mặc định';
+      sel.appendChild(o); sel.disabled = true;
+    } else {
+      sel.disabled = false;
+      TTS_ZH_VOICES.forEach(function (v) {
+        var op = document.createElement('option');
+        op.value = ttsVoiceKey(v); op.textContent = v.name;
+        sel.appendChild(op);
+      });
+      var cur = ttsVoiceFor();
+      if (cur) sel.value = ttsVoiceKey(cur);
+    }
+    sel.onchange = function () { setCommonVoice(this.value); };
+  }
+  ttsVoiceNote();
+}
+function setCommonVoice(key) {
+  try { localStorage.setItem(TTS_VOICE_LS, key); } catch (e) {}
+  var sels = document.querySelectorAll('.tts-voice-select');
+  for (var i = 0; i < sels.length; i++) sels[i].value = key;
+  ttsVoiceNote();
+}
+function pickCommonVoices() {
+  if (!('speechSynthesis' in window)) return;
+  TTS_ZH_VOICES = window.speechSynthesis.getVoices().filter(function (v) {
+    return (v.lang || '').toLowerCase().indexOf('zh') === 0;
+  });
+  buildCommonVoicePickers();
+}
+if ('speechSynthesis' in window) {
+  pickCommonVoices();
+  // Nối tiếp handler onvoiceschanged đã có (của Bài 8) thay vì ghi đè nó.
+  var _prevOnVoicesChanged = window.speechSynthesis.onvoiceschanged;
+  window.speechSynthesis.onvoiceschanged = function () {
+    if (typeof _prevOnVoicesChanged === 'function') { try { _prevOnVoicesChanged(); } catch (e) {} }
+    pickCommonVoices();
+  };
+}
+function previewCommonVoice() {
+  speakRate('你好，很高兴认识你。', 0.88);
+}
+
+// ----- Nghe theo đoạn: mỗi chunk = 1 utterance, onend gọi chunk tiếp theo -----
+var chunkCur = null; // {id, chunks, idx, end, rate, playing, paused, gen}
+function chunkChunks(id) { return (window.CHUNK_DATA && window.CHUNK_DATA[id]) || []; }
+function chunkPauseBtn(id) { return document.getElementById('chunk-pause-' + id); }
+function updateChunkPauseBtn(id) {
+  var b = chunkPauseBtn(id);
+  if (b) b.textContent = (chunkCur && chunkCur.id === id && chunkCur.paused) ? '▶️ Tiếp tục nghe' : '⏸️ Tạm dừng';
+  // Nút play/pause dạng icon (file tổng kết): ▶️ khi chưa đọc/tạm dừng, ⏸️ khi đang đọc.
+  var pb = document.getElementById('chunk-play-' + id);
+  if (pb) pb.textContent = (chunkCur && chunkCur.id === id && chunkCur.playing && !chunkCur.paused) ? '⏸️' : '▶️';
+}
+function stopChunked(id) {
+  var stoppedId = null;
+  if (chunkCur && (!id || chunkCur.id === id)) {
+    chunkCur.playing = false; chunkCur.paused = false; chunkCur.gen++;
+    stoppedId = chunkCur.id; chunkCur = null;
+  }
+  if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); }
+  if (stoppedId) updateChunkPauseBtn(stoppedId);
+  else if (!id) {
+    var btns = document.querySelectorAll('[id^="chunk-pause-"]');
+    for (var i = 0; i < btns.length; i++) btns[i].textContent = '⏸️ Tạm dừng';
+  }
+}
+function playChunked(id, rate, start, end) {
+  if (!('speechSynthesis' in window)) return;
+  var chunks = chunkChunks(id);
+  if (!chunks.length) return;
+  stopChunked();
+  if (typeof stopDlg === 'function') { try { stopDlg(); } catch (e) {} }
+  rate = (typeof chunkRate !== 'undefined' && chunkRate[id]) || rate || 0.88;
+  start = (typeof start === 'number') ? start : 0;
+  end = (typeof end === 'number') ? end : chunks.length - 1;
+  chunkCur = { id: id, chunks: chunks, idx: start, end: end, rate: rate, playing: true, paused: false, gen: 0 };
+  updateChunkPauseBtn(id);
+  speakChunk(chunkCur, chunkCur.gen);
+}
+function speakChunk(p, gen) {
+  if (!p.playing || gen !== p.gen) return;
+  if (p.idx > p.end) { chunkCur = null; p.playing = false; p.paused = false; updateChunkPauseBtn(p.id); return; }
+  var text = p.chunks[p.idx];
+  if (!text) { p.idx++; speakChunk(p, gen); return; }
+  var u = new SpeechSynthesisUtterance(text);
+  u.lang = 'zh-CN'; u.rate = p.rate;
+  var v = ttsVoiceFor(); if (v) u.voice = v;
+  u.onend = function () {
+    if (!p.playing || gen !== p.gen) return;
+    p.idx++;
+    speakChunk(p, gen);
+  };
+  u.onerror = function () {
+    // cancel() (bấm nút khác / dừng / Bài 8 bắt đầu) cũng kích hoạt onerror:
+    // dừng hẳn chuỗi, KHÔNG đọc chunk tiếp theo.
+    if (gen !== p.gen) return;
+    if (chunkCur === p) chunkCur = null;
+    p.playing = false; p.paused = false; updateChunkPauseBtn(p.id);
+  };
+  window.speechSynthesis.speak(u);
+}
+function toggleChunkPause(id) {
+  if (!('speechSynthesis' in window)) return;
+  if (!chunkCur || chunkCur.id !== id) return;
+  if (chunkCur.paused) {
+    // Đọc tiếp: đọc lại từ đầu chunk đang dừng (KHÔNG dùng pause()/
+    // resume(): trên Chrome/Android resume() sau pause() thường không đọc
+    // tiếp, chuỗi đọc chết hẳn).
+    chunkCur.paused = false;
+    updateChunkPauseBtn(id);
+    speakChunk(chunkCur, chunkCur.gen);
+  } else {
+    // Tạm dừng: hủy utterance đang đọc, giữ nguyên idx (đọc tiếp sẽ đọc
+    // lại chunk này). Tăng gen TRƯỚC khi cancel để callback onerror/onend
+    // của utterance bị hủy không động vào chuỗi nữa.
+    chunkCur.paused = true;
+    chunkCur.gen++;
+    window.speechSynthesis.cancel();
+    updateChunkPauseBtn(id);
+  }
+}
+function restartChunked(id) {
+  var rate = (chunkCur && chunkCur.id === id) ? chunkCur.rate : 0.88;
+  playChunked(id, rate);
+}
+
+// Tốc độ riêng từng player chunked (file tổng kết): thanh trượt tốc độ
+// ghi vào đây, playChunked dùng nó thay cho tốc độ mặc định 0.88.
+var chunkRate = {};
+function setChunkRateNum(id, v) {
+  var val = parseFloat(v);
+  if (isNaN(val)) val = 0.88;
+  val = Math.min(1.5, Math.max(0.5, val));
+  chunkRate[id] = val;
+  var r = document.getElementById('chunk-speed-range-' + id);
+  var n = document.getElementById('chunk-speed-num-' + id);
+  if (r) r.value = val;
+  if (n) n.value = val;
+}
+// Nút play/pause 1 nút duy nhất (file tổng kết, theo format Bài 8 mới):
+// chưa đọc thì đọc từ đầu, đang đọc/tạm dừng thì đổi trạng thái.
+function toggleChunkPlay(id) {
+  if (!('speechSynthesis' in window)) return;
+  if (chunkCur && chunkCur.id === id) { toggleChunkPause(id); return; }
+  playChunked(id, chunkRate[id] || 0.88);
+}
+// Nút Pinyin (file tổng kết): ẩn/hiện pinyin trên chữ trong hộp của
+// chính player đó + trạng thái nút (bật = nền xanh dương).
+function toggleChunkRuby(zhId, btnId) {
+  var zh = document.getElementById(zhId);
+  if (!zh) return;
+  zh.classList.toggle('hide-ruby');
+  var btn = document.getElementById(btnId);
+  if (btn) {
+    var on = !zh.classList.contains('hide-ruby');
+    btn.classList.toggle('on', on);
+    btn.classList.toggle('off', !on);
+  }
+}
+// Nút 👁️ dịch nghĩa kiểu truyện (file tổng kết): dịch nghĩa nằm trong hộp
+// chữ, ẩn bằng hide-trans.
+function toggleChunkTrans(zhId, btnId) {
+  var zh = document.getElementById(zhId);
+  if (!zh) return;
+  var show = zh.classList.contains('hide-trans');
+  zh.classList.toggle('hide-trans', !show);
+  var btn = document.getElementById(btnId);
+  if (btn) btn.classList.toggle('dlg-btn-on', show);
+}
+// Nút 👁️ dịch nghĩa kiểu Bài 7 (file tổng kết): dịch nghĩa ở hộp riêng,
+// hiện bằng .show.
+function toggleChunkHelp(helpId, btnId) {
+  var help = document.getElementById(helpId);
+  if (!help) return;
+  var shown = help.classList.toggle('show');
+  var btn = document.getElementById(btnId);
+  if (btn) btn.classList.toggle('dlg-btn-on', shown);
+}
+
+// ----- Ghi đè speak()/speakRate() của file mẫu (giữ nguyên chữ ký) -----
+// Mọi lần đọc lẻ (từ mới, câu ví dụ, bài nghe, đáp án đúng...) đều dùng
+// giọng chung đã chọn; đồng thời dừng mọi chuỗi chunk đang đọc dở.
+function speakRate(text, rate) {
+  if (!('speechSynthesis' in window)) return;
+  stopChunked();
+  if (typeof stopDlg === 'function') { try { stopDlg(); } catch (e) {} }
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(text);
+  u.lang = 'zh-CN'; u.rate = rate || 0.88;
+  var v = ttsVoiceFor(); if (v) u.voice = v;
+  window.speechSynthesis.speak(u);
+}
+function speak(text) { speakRate(text, 0.88); }
 </script>
 
 </body>
