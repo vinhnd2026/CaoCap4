@@ -22,7 +22,7 @@ Bộ bài học Cao cấp 4: 72 ngày, mỗi ngày 5 từ mới, học từ Bài
 | Cao cấp 1 | 447 | 90 | [Mở](https://vinhnd2026.github.io/CaoCap1/) |
 | Cao cấp 2 | 405 | 81 | ⏳ đang hoàn thiện |
 | Cao cấp 3 | 353 | 71 | ⏳ đang hoàn thiện |
-| Cao cấp 4 | 357 | 72 | ⏳ đang hoàn thiện |
+| Cao cấp 4 | 357 | 72 | [Mở](https://vinhnd2026.github.io/CaoCap4/) |
 
 ## Bổ sung (học sau khi xong 72 ngày)
 
