@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -710,6 +710,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="，|朋友|礼仪|，|伴侣|看|以后|学习|他|他|交际|没有|具备|。|他|具备|说|一起|电视|，|，|，|意志力|也|完|和|可是"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="他看完电视以后，就和伴侣一起去公园看花卉，大家都很高兴。">
+<div><b>Câu 4:</b> Sau khi xem xong ti vi, anh ấy cùng bạn đời đi công viên ngắm hoa, mọi người đều rất vui.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="看|去|。|电视|一起|很|公园|完|，|就|和|以后|他|高兴|大家|，|花卉|伴侣|都|看"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu Cao cấp 4 · Tổng kết Bài 1</span></h2>
@@ -888,7 +894,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -919,7 +925,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'caocap4-Day-07';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (损失)",
@@ -1012,6 +1018,10 @@ var ITEM_INFO = {
   "scr-3": [
     "Sắp xếp câu 3",
     "他看完电视以后，和伴侣一起学习，朋友说，他具备礼仪，也具备交际，可是他没有意志力。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "他看完电视以后，就和伴侣一起去公园看花卉，大家都很高兴。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",

@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -715,6 +715,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="，|不|了|还|。|说|不仅|所以|说|够|时间|医生|可是|，|没有|，|冲击|他|了|，|想|处罚|他|学习|学习"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="他不仅打哈欠，还觉得很不适，朋友说，抽烟对他的冲击太大了。">
+<div><b>Câu 4:</b> Anh ấy không những ngáp, mà còn thấy rất khó chịu; bạn bè nói, hút thuốc gây chấn động quá lớn đối với anh ấy.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="大|朋友|他|觉得|了|说|不仅|太|冲击|对|还|，|他的|。|抽烟|不适|，|，|打哈欠|很"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu Cao cấp 4</span></h2>
@@ -854,7 +860,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -885,7 +891,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'caocap4-Day-01';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (一技之长)",
@@ -978,6 +984,10 @@ var ITEM_INFO = {
   "scr-3": [
     "Sắp xếp câu 3",
     "医生不仅说了处罚，还说了冲击，他想学习，可是时间不够，所以他没有学习。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "他不仅打哈欠，还觉得很不适，朋友说，抽烟对他的冲击太大了。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",

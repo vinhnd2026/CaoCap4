@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -731,6 +731,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="他的|朋友|一起|样|地方|的|很|侵入|朋友|可是|，|很|朋友|不|学习|，|和|他|。|，|这|他|觉得|说|不|密切|高兴|，|老师|好|时候"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="他看出来朋友很困扰，就和朋友一起学习，大家都很高兴。">
+<div><b>Câu 4:</b> Anh ấy nhận ra bạn mình rất phiền muộn, liền cùng bạn học tập, mọi người đều rất vui.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="和|出|他|，|高兴|很|一起|很|学习|朋友|困扰|来|看|大家|。|朋友|就|都|，"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu Cao cấp 4</span></h2>
@@ -869,7 +875,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -900,7 +906,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'caocap4-Day-12';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (开销)",
@@ -993,6 +999,10 @@ var ITEM_INFO = {
   "scr-3": [
     "Sắp xếp câu 3",
     "他和朋友一起学习的时候，朋友很密切，可是朋友侵入他的地方，他觉得很不高兴，老师说这样不好。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "他看出来朋友很困扰，就和朋友一起学习，大家都很高兴。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
