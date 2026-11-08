@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -495,14 +495,14 @@ img, svg { max-width: 100%; }
 <div class="meta">Pinyin: <b>nǐ</b> · Hán Việt: <b>nghĩ</b> · Bộ thủ: <b>扌 (Thủ — tay)</b></div>
 <div><span class="label">Nghĩa:</span> mô phỏng; dự định</div>
 <div class="label">Chiết tự</div>
-<div><b>扌 + 疑</b></div>
+<div><b>扌 + 以</b></div>
 <div style="margin-top:4px;">Phồn thể: <b>擬</b> — Phồn thể 擬 gồm 扌 và 疑; giản thể rút gọn thành 拟.</div>
 <div class="label">Loại chữ</div>
-<div>Hình thanh — 扌 gợi nghĩa (tay), 疑 gợi âm (âm cổ gần với nǐ).</div>
+<div>Hình thanh — 扌 gợi nghĩa (tay), 以 gợi âm (âm cổ gần với nǐ).</div>
 <div class="label">Từng thành phần</div>
 <table><tr><th>Thành phần</th><th>Pinyin · Hán Việt</th><th>Nghĩa riêng</th><th>Vai trò</th></tr>
 <tr><td><b>扌</b></td><td>shǒu · thủ</td><td>tay</td><td>Gợi nghĩa (bộ thủ)</td></tr>
-<tr><td><b>疑</b></td><td>yí · nghi</td><td>nghi ngờ</td><td>Gợi âm</td></tr>
+<tr><td><b>以</b></td><td>yǐ · dĩ</td><td>dùng, lấy</td><td>Gợi âm</td></tr>
 </table></div>
 <div class="stroke-box">
 <div class="stroke" id="stroke-d64w3c1"></div>
@@ -687,6 +687,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="学习|，|我们|了|，|，|要|的|容易|说|不|有|老师|是|了|形势|，|沙丘|沙丘|是|退化|，|淹没|。|水|淹没|可是|的"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="公园里有的是花卉，大家都去看，朋友说，花卉很漂亮，也很迷人。">
+<div><b>Câu 4:</b> Trong công viên có đầy hoa cỏ, mọi người đều đến xem; bạn bè nói, hoa cỏ rất đẹp, cũng rất quyến rũ.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="去|很|迷人|公园|大家|里|花卉|。|朋友|也|，|很|的|都|漂亮|，|，|说|，|看|是|有|花卉"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu Cao cấp 4</span></h2>
@@ -696,7 +702,7 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 4)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>她<rt>Tā</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>虚<rt>xū</rt></ruby><ruby>拟<rt>nǐ</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>，<ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby>。 <ruby>电<rt>Diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>雨<rt>yǔ</rt></ruby>，<ruby>水<rt>shuǐ</rt></ruby><ruby>淹<rt>yān</rt></ruby><ruby>没<rt>mò</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby>。 <ruby>大<rt>Dà</rt></ruby><ruby>雨<rt>yǔ</rt></ruby><ruby>掀<rt>xiān</rt></ruby><ruby>翻<rt>fān</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>，<ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>难<rt>nán</rt></ruby><ruby>过<rt>guò</rt></ruby>。 <ruby>学<rt>Xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>缩<rt>suō</rt></ruby><ruby>减<rt>jiǎn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>支<rt>zhī</rt></ruby>，<ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>担<rt>dān</rt></ruby><ruby>心<rt>xīn</rt></ruby>。 <ruby>虚<rt>Xū</rt></ruby><ruby>拟<rt>nǐ</rt></ruby><ruby>游<rt>yóu</rt></ruby><ruby>戏<rt>xì</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>意<rt>yì</rt></ruby><ruby>思<rt>sī</rt></ruby>，<ruby>可<rt>kě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>会<rt>huì</rt></ruby><ruby>退<rt>tuì</rt></ruby><ruby>化<rt>huà</rt></ruby>。</p>
+<p class="read-para-text"><ruby>她<rt>Tā</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>虚<rt>xū</rt></ruby><ruby>拟<rt>nǐ</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>，<ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby>。 <ruby>电<rt>Diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>雨<rt>yǔ</rt></ruby>，<ruby>水<rt>shuǐ</rt></ruby><ruby>淹<rt>yān</rt></ruby><ruby>没<rt>mò</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby>。 <ruby>大<rt>Dà</rt></ruby><ruby>雨<rt>yǔ</rt></ruby><ruby>掀<rt>xiān</rt></ruby><ruby>翻<rt>fān</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>，<ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>难<rt>nán</rt></ruby><ruby>过<rt>guò</rt></ruby>。 <ruby>学<rt>Xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>缩<rt>suō</rt></ruby><ruby>减<rt>jiǎn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>支<rt>zhī</rt></ruby>，<ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>担<rt>dān</rt></ruby><ruby>心<rt>xīn</rt></ruby>。 <ruby>虚<rt>Xū</rt></ruby><ruby>拟<rt>nǐ</rt></ruby><ruby>游<rt>yóu</rt></ruby><ruby>戏<rt>xì</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>意<rt>yì</rt></ruby><ruby>思<rt>si</rt></ruby>，<ruby>可<rt>kě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>会<rt>huì</rt></ruby><ruby>退<rt>tuì</rt></ruby><ruby>化<rt>huà</rt></ruby>。</p>
 </section>
 </div>
 <script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["她看一个虚拟电影，电影很好看，她很喜欢。", "电影里下大雨，水淹没了房子。", "大雨掀翻了房子里的东西，房子里的人很难过。", "学校今年缩减了开支，老师和学生都很担心。", "虚拟游戏很有意思，可是学习会退化。"];</script>
@@ -757,13 +763,13 @@ img, svg { max-width: 100%; }
 <div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button> <button class="tts-btn" onclick="playDlgLine(8)">9</button> <button class="tts-btn" onclick="playDlgLine(9)">10</button> <button class="tts-btn" onclick="playDlgLine(10)">11</button> <button class="tts-btn" onclick="playDlgLine(11)">12</button> <button class="tts-btn" onclick="playDlgLine(12)">13</button> <button class="tts-btn" onclick="playDlgLine(13)">14</button></div>
 <div class="dlg-script" id="dlg-script" style="display:none">
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>昨<rt>zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>虚<rt>xū</rt></ruby><ruby>拟<rt>nǐ</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>虚<rt>xū</rt></ruby><ruby>拟<rt>nǐ</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Hôm qua bạn có xem bộ phim ảo đó không? Hôm nay bạn có xem bộ phim ảo đó không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>看<rt>Kàn</rt></ruby><ruby>了<rt>le</rt></ruby>！<ruby>那<rt>Nà</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Xem rồi! Bộ phim đó rất hay, tôi rất thích. Bạn thấy thế nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>看<rt>Kàn</rt></ruby><ruby>了<rt>le</rt></ruby>！<ruby>那<rt>Nà</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Xem rồi! Bộ phim đó rất hay, tôi rất thích. Bạn thấy thế nào?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>电<rt>Diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>雨<rt>yǔ</rt></ruby>，<ruby>水<rt>shuǐ</rt></ruby><ruby>淹<rt>yān</rt></ruby><ruby>没<rt>mò</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Trong phim trời mưa to, nước nhấn chìm nhà cửa. Bạn có biết không? Thật không?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>对<rt>Duì</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>雨<rt>yǔ</rt></ruby><ruby>掀<rt>xiān</rt></ruby><ruby>翻<rt>fān</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>，<ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>难<rt>nán</rt></ruby><ruby>过<rt>guò</rt></ruby>。</span><div class="dlg-vi">Đúng vậy, mưa lớn lật tung đồ đạc trong nhà, người trong nhà rất buồn.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>缩<rt>suō</rt></ruby><ruby>减<rt>jiǎn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>支<rt>zhī</rt></ruby>，<ruby>老<rt>lǎo</rt></ruby><ruby>师<rt>shī</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>担<rt>dān</rt></ruby><ruby>心<rt>xīn</rt></ruby>。</span><div class="dlg-vi">Trường chúng ta năm nay cắt giảm chi tiêu, thầy cô và học sinh đều rất lo lắng.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby>，<ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>缩<rt>suō</rt></ruby><ruby>减<rt>jiǎn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>支<rt>zhī</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>好<rt>hào</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Tôi biết, trường cắt giảm chi tiêu, chúng ta phải học thật tốt. Còn bạn thì sao?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>虚<rt>xū</rt></ruby><ruby>拟<rt>nǐ</rt></ruby><ruby>游<rt>yóu</rt></ruby><ruby>戏<rt>xì</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Bạn thấy trò chơi ảo có hay không? Bạn thấy sao? Bạn có biết không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>虚<rt>Xū</rt></ruby><ruby>拟<rt>nǐ</rt></ruby><ruby>游<rt>yóu</rt></ruby><ruby>戏<rt>xì</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>意<rt>yì</rt></ruby><ruby>思<rt>sī</rt></ruby>，<ruby>但<rt>dàn</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>会<rt>huì</rt></ruby><ruby>退<rt>tuì</rt></ruby><ruby>化<rt>huà</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Trò chơi ảo rất thú vị, nhưng việc học sẽ thoái hóa. Bạn thấy thế nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>虚<rt>Xū</rt></ruby><ruby>拟<rt>nǐ</rt></ruby><ruby>游<rt>yóu</rt></ruby><ruby>戏<rt>xì</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>意<rt>yì</rt></ruby><ruby>思<rt>si</rt></ruby>，<ruby>但<rt>dàn</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>会<rt>huì</rt></ruby><ruby>退<rt>tuì</rt></ruby><ruby>化<rt>huà</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Trò chơi ảo rất thú vị, nhưng việc học sẽ thoái hóa. Bạn thấy thế nào?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>对<rt>duì</rt></ruby>，<ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>重<rt>zhòng</rt></ruby><ruby>要<rt>yào</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>应<rt>yīng</rt></ruby><ruby>该<rt>gāi</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>习<rt>xí</rt></ruby>。<ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Bạn nói đúng, học tập rất quan trọng, chúng ta nên học. Thật không? Bạn thấy thế nào?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>公<rt>gōng</rt></ruby><ruby>园<rt>yuán</rt></ruby><ruby>吧<rt>ba</rt></ruby>，<ruby>公<rt>gōng</rt></ruby><ruby>园<rt>yuán</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>花<rt>huā</rt></ruby><ruby>卉<rt>huì</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Ngày mai chúng ta đi công viên nhé, trong công viên có hoa, rất đẹp. Còn bạn thì sao?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>早<rt>zǎo</rt></ruby><ruby>上<rt>shàng</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>公<rt>gōng</rt></ruby><ruby>园<rt>yuán</rt></ruby>，<ruby>看<rt>kàn</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>花<rt>huā</rt></ruby><ruby>卉<rt>huì</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Được! Sáng mai chúng ta cùng đi công viên, ngắm hoa. Bạn có biết không?</div></div>
@@ -832,7 +838,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -852,7 +858,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 缩减 = suōjiǎn · 退化 = tuìhuà · 掀翻 = xiānfān · 虚拟 = xūnǐ · 淹没 = yānmò</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. A — 他有的是时间。 &nbsp;|&nbsp; 2. B — 他有的是时间。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 缩减 → 退化 → 掀翻 → 虚拟 → 淹没</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我们缩减了开支，可是形势退化了，我们都很焦虑，老师说，缩减不是容易的。<br>2. 他掀翻了我们的策划，可是这是虚拟的，也是数字化的，朋友说，掀翻不是好的。<br>3. 有的是沙丘，可是水淹没了沙丘，形势退化了，老师说，淹没不是容易的，我们要学习。</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我们缩减了开支，可是形势退化了，我们都很焦虑，老师说，缩减不是容易的。<br>2. 他掀翻了我们的策划，可是这是虚拟的，也是数字化的，朋友说，掀翻不是好的。<br>3. 有的是沙丘，可是水淹没了沙丘，形势退化了，老师说，淹没不是容易的，我们要学习。<br>4. 公园里有的是花卉，大家都去看，朋友说，花卉很漂亮，也很迷人。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. C — 房子 &nbsp;|&nbsp; 2. C — 因为大雨掀翻了房子里的东西 &nbsp;|&nbsp; 3. B — 缩减了开支</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. C — 房子 &nbsp; 2. A — 因为大雨掀翻了房子里的东西 &nbsp; 3. D — 因为学习会退化 &nbsp; 4. B — 因为公园里有花卉</p>
 </details>
@@ -863,7 +869,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'caocap4-Day-64';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (绝迹)",
@@ -956,6 +962,10 @@ var ITEM_INFO = {
   "scr-3": [
     "Sắp xếp câu 3",
     "有的是沙丘，可是水淹没了沙丘，形势退化了，老师说，淹没不是容易的，我们要学习。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "公园里有的是花卉，大家都去看，朋友说，花卉很漂亮，也很迷人。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
@@ -1600,7 +1610,7 @@ var LOCAL_PY_DICT = {
   "gaoang": [
     "高昂"
   ],
-  "guangguner": [
+  "guanggunr": [
     "光棍儿"
   ],
   "ji": [

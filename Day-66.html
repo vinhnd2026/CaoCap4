@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -258,7 +258,7 @@ img, svg { max-width: 100%; }
 <div><b>Câu 3.</b> 名山大川＿＿了我。 <span class="hint">(zhìyù — chữa khỏi; chữa lành)</span></div>
 <div class="input-check"><input type="text" placeholder="Gõ pinyin: zhiyu..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
 <div class="q-item" id="rev-4" data-ans="琢磨">
-<div><b>Câu 4.</b> Pinyin: <i>zuómó</i> · Hán Việt: <i>trác ma</i> · Nghĩa: “nghiền ngẫm; mài giũa”.</div>
+<div><b>Câu 4.</b> Pinyin: <i>zuómo</i> · Hán Việt: <i>trác ma</i> · Nghĩa: “nghiền ngẫm; mài giũa”.</div>
 <div class="input-check"><input type="text" placeholder="Gõ pinyin: zuomo..."><button class="btn-primary" onclick="checkInput(this)">Kiểm tra</button><span class="feedback"></span></div></div>
 <div class="q-item" id="rev-5" data-ans="保佑">
 <div><b>Câu 5.</b> 他＿＿了我们。 <span class="hint">(bǎoyòu — phù hộ; che chở)</span></div>
@@ -786,6 +786,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="要|，|说|多姿多彩|老师|大街小巷|多姿多彩|多姿多彩|，|重|看上去|可是|名山大川|，|，|。|很|很"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="大街小巷看上去多姿多彩，他大开眼界，朋友说，这里很迷人。">
+<div><b>Câu 4:</b> Đường lớn ngõ nhỏ trông đa sắc đa dạng, anh ấy được mở mang tầm mắt; bạn bè nói, nơi này rất quyến rũ.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="他|很|，|，|朋友|。|迷人|这里|大街小巷|，|大开眼界|看上去|多姿多彩|说"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu Cao cấp 4</span></h2>
@@ -795,7 +801,7 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 4)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>她<rt>Tā</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>地<rt>dì</rt></ruby><ruby>方<rt>fāng</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>街<rt>jiē</rt></ruby><ruby>小<rt>xiǎo</rt></ruby><ruby>巷<rt>xiàng</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>。 <ruby>那<rt>Nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>姿<rt>zī</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>彩<rt>cǎi</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>后<rt>hòu</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>眼<rt>yǎn</rt></ruby><ruby>界<rt>jiè</rt></ruby>。 <ruby>那<rt>Nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>朗<rt>lǎng</rt></ruby>，<ruby>对<rt>duì</rt></ruby><ruby>她<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>她<rt>Tā</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>拆<rt>chāi</rt></ruby><ruby>除<rt>chú</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby>，<ruby>因<rt>yīn</rt></ruby><ruby>为<rt>wèi</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>旧<rt>jiù</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>住<rt>zhù</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby>。 <ruby>那<rt>Nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>粗<rt>cū</rt></ruby><ruby>犷<rt>guǎng</rt></ruby>，<ruby>可<rt>kě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby>。</p>
+<p class="read-para-text"><ruby>她<rt>Tā</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>地<rt>dì</rt></ruby><ruby>方<rt>fāng</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>街<rt>jiē</rt></ruby><ruby>小<rt>xiǎo</rt></ruby><ruby>巷<rt>xiàng</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>。 <ruby>那<rt>Nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>姿<rt>zī</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>彩<rt>cǎi</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>后<rt>hòu</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>眼<rt>yǎn</rt></ruby><ruby>界<rt>jiè</rt></ruby>。 <ruby>那<rt>Nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>朗<rt>lǎng</rt></ruby>，<ruby>对<rt>duì</rt></ruby><ruby>她<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>她<rt>Tā</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>拆<rt>chāi</rt></ruby><ruby>除<rt>chú</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby>，<ruby>因<rt>yīn</rt></ruby><ruby>为<rt>wèi</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>旧<rt>jiù</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>住<rt>zhù</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby>。 <ruby>那<rt>Nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>粗<rt>cū</rt></ruby><ruby>犷<rt>guǎng</rt></ruby>，<ruby>可<rt>kě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby>。</p>
 </section>
 </div>
 <script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["她去了一个地方，大街小巷都有好吃的东西。", "那里的东西多姿多彩，她看了以后，大开眼界。", "那里的人很开朗，对她很好。", "她看到他们拆除一个房子，因为房子很旧了，没有人想住在那里。", "那里的人很粗犷，可是很好，她很喜欢。"];</script>
@@ -861,7 +867,7 @@ img, svg { max-width: 100%; }
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>很<rt>Hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>！<ruby>那<rt>Nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>姿<rt>zī</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>彩<rt>cǎi</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>后<rt>hòu</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>眼<rt>yǎn</rt></ruby><ruby>界<rt>jiè</rt></ruby>。</span><div class="dlg-vi">Rất đẹp! Đồ vật ở đó đa dạng muôn màu, tôi xem xong thì mở rộng tầm mắt.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>那<rt>Nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Người ở đó thế nào? Bạn có biết không? Bạn thấy sao?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>那<rt>Nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>朗<rt>lǎng</rt></ruby>，<ruby>对<rt>duì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>真<rt>Zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Người ở đó rất cởi mở, đối với tôi rất tốt. Bạn thấy thế nào? Thật không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>候<rt>hòu</rt></ruby><ruby>回<rt>huí</rt></ruby><ruby>来<rt>lái</rt></ruby><ruby>的<rt>de</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Bạn về lúc nào? Bạn có biết không? Bạn thấy sao?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>候<rt>hou</rt></ruby><ruby>回<rt>huí</rt></ruby><ruby>来<rt>lái</rt></ruby><ruby>的<rt>de</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Bạn về lúc nào? Bạn có biết không? Bạn thấy sao?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>昨<rt>zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>回<rt>huí</rt></ruby><ruby>来<rt>lái</rt></ruby><ruby>的<rt>de</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>拆<rt>chāi</rt></ruby><ruby>除<rt>chú</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Tôi về hôm qua. Tôi thấy họ tháo dỡ một ngôi nhà. Còn bạn thì sao?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>为<rt>Wèi</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>拆<rt>chāi</rt></ruby><ruby>除<rt>chú</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>知<rt>zhī</rt></ruby><ruby>道<rt>dào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Vì sao tháo dỡ nhà? Bạn có biết không? Bạn thấy sao?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>因<rt>Yīn</rt></ruby><ruby>为<rt>wèi</rt></ruby><ruby>房<rt>fáng</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>旧<rt>jiù</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>住<rt>zhù</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby><ruby>里<rt>lǐ</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Vì nhà rất cũ rồi, không ai muốn ở trong đó. Bạn thấy thế nào?</div></div>
@@ -931,7 +937,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -951,7 +957,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 拆除 = chāichú · 粗犷 = cūguǎng · 大街小巷 = dàjiē-xiǎoxiàng · 大开眼界 = dàkāi-yǎnjiè · 多姿多彩 = duōzī-duōcǎi</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. B — 他看上去很忙。 &nbsp;|&nbsp; 2. 他看上去很高兴，还很喜欢学习。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 拆除 → 粗犷 → 大街小巷 → 大开眼界 → 多姿多彩</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 他出了一次境，可是大街小巷多姿多彩，朋友说，他大开眼界，我们要学习。<br>2. 大街小巷都很迷人，可是他没有大开眼界，因为时间不够，所以他没有学习。<br>3. 看上去，名山大川多姿多彩，可是大街小巷很多姿多彩，老师说，多姿多彩很重要。</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 他出了一次境，可是大街小巷多姿多彩，朋友说，他大开眼界，我们要学习。<br>2. 大街小巷都很迷人，可是他没有大开眼界，因为时间不够，所以他没有学习。<br>3. 看上去，名山大川多姿多彩，可是大街小巷很多姿多彩，老师说，多姿多彩很重要。<br>4. 大街小巷看上去多姿多彩，他大开眼界，朋友说，这里很迷人。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. D — 好吃的东西 &nbsp;|&nbsp; 2. A — 因为那里的东西多姿多彩 &nbsp;|&nbsp; 3. D — 因为房子很旧了，没有人想住在那里</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. A — 好吃的东西 &nbsp; 2. C — 因为那里的东西多姿多彩 &nbsp; 3. D — 因为房子很旧了，没有人想住在那里 &nbsp; 4. B — 旅游，看看多姿多彩的东西</p>
 </details>
@@ -962,7 +968,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'caocap4-Day-66';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (遥远)",
@@ -1055,6 +1061,10 @@ var ITEM_INFO = {
   "scr-3": [
     "Sắp xếp câu 3",
     "看上去，名山大川多姿多彩，可是大街小巷很多姿多彩，老师说，多姿多彩很重要。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "大街小巷看上去多姿多彩，他大开眼界，朋友说，这里很迷人。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
@@ -1699,7 +1709,7 @@ var LOCAL_PY_DICT = {
   "gaoang": [
     "高昂"
   ],
-  "guangguner": [
+  "guanggunr": [
     "光棍儿"
   ],
   "ji": [
@@ -4220,7 +4230,7 @@ restore();
 </script>
 <script>
 // ====== Flashcard ôn tập (mọi từ đã học các ngày trước; chiều thẻ ngẫu nhiên) ======
-var FLASH_DATA = [{"word": "货真价实", "pinyin": "huòzhēn-jiàshí", "hanviet": "hóa chân giá thực", "meaning": "hàng thật giá thật"}, {"word": "积攒", "pinyin": "jīzǎn", "hanviet": "tích toàn", "meaning": "tích lũy; dành dụm"}, {"word": "集约农业", "pinyin": "jíyuēnóngyè", "hanviet": "tập ước nông nghiệp", "meaning": "nông nghiệp thâm canh (tập trung)"}, {"word": "截至", "pinyin": "jiézhì", "hanviet": "tiệt chí", "meaning": "tính đến; cho đến"}, {"word": "借助", "pinyin": "jièzhù", "hanviet": "tá trợ", "meaning": "nhờ vào; dựa vào; mượn sức"}, {"word": "绝迹", "pinyin": "juéjì", "hanviet": "tuyệt tích", "meaning": "tuyệt chủng; biến mất hoàn toàn"}, {"word": "砍伐", "pinyin": "kǎnfá", "hanviet": "khảm phạt", "meaning": "chặt phá (cây cối)"}, {"word": "漫天飞舞", "pinyin": "màntiān-fēiwǔ", "hanviet": "mạn thiên phi vũ", "meaning": "bay rợp trời; tung bay khắp trời"}, {"word": "密不可分", "pinyin": "mìbùkěfēn", "hanviet": "mật bất khả phân", "meaning": "gắn bó không thể tách rời"}, {"word": "沙丘", "pinyin": "shāqiū", "hanviet": "sa khâu", "meaning": "cồn cát; đồi cát"}, {"word": "缩减", "pinyin": "suōjiǎn", "hanviet": "súc giảm", "meaning": "cắt giảm; thu hẹp"}, {"word": "退化", "pinyin": "tuìhuà", "hanviet": "thoái hóa", "meaning": "thoái hóa; suy thoái"}, {"word": "掀翻", "pinyin": "xiānfān", "hanviet": "hiên phiên", "meaning": "lật đổ; hất tung"}, {"word": "虚拟", "pinyin": "xūnǐ", "hanviet": "hư nghĩ", "meaning": "ảo; hư cấu (không có thật)"}, {"word": "淹没", "pinyin": "yānmò", "hanviet": "yêm một", "meaning": "nhấn chìm; ngập"}, {"word": "遥远", "pinyin": "yáoyuǎn", "hanviet": "diêu viễn", "meaning": "xa xôi; xa vời"}, {"word": "占领", "pinyin": "zhànlǐng", "hanviet": "chiếm lĩnh", "meaning": "chiếm đóng; chiếm lĩnh"}, {"word": "治愈", "pinyin": "zhìyù", "hanviet": "trị dũ", "meaning": "chữa khỏi; chữa lành"}, {"word": "琢磨", "pinyin": "zuómó", "hanviet": "trác ma", "meaning": "nghiền ngẫm; mài giũa"}, {"word": "保佑", "pinyin": "bǎoyòu", "hanviet": "bảo hựu", "meaning": "phù hộ; che chở"}];
+var FLASH_DATA = [{"word": "货真价实", "pinyin": "huòzhēn-jiàshí", "hanviet": "hóa chân giá thực", "meaning": "hàng thật giá thật"}, {"word": "积攒", "pinyin": "jīzǎn", "hanviet": "tích toàn", "meaning": "tích lũy; dành dụm"}, {"word": "集约农业", "pinyin": "jíyuēnóngyè", "hanviet": "tập ước nông nghiệp", "meaning": "nông nghiệp thâm canh (tập trung)"}, {"word": "截至", "pinyin": "jiézhì", "hanviet": "tiệt chí", "meaning": "tính đến; cho đến"}, {"word": "借助", "pinyin": "jièzhù", "hanviet": "tá trợ", "meaning": "nhờ vào; dựa vào; mượn sức"}, {"word": "绝迹", "pinyin": "juéjì", "hanviet": "tuyệt tích", "meaning": "tuyệt chủng; biến mất hoàn toàn"}, {"word": "砍伐", "pinyin": "kǎnfá", "hanviet": "khảm phạt", "meaning": "chặt phá (cây cối)"}, {"word": "漫天飞舞", "pinyin": "màntiān-fēiwǔ", "hanviet": "mạn thiên phi vũ", "meaning": "bay rợp trời; tung bay khắp trời"}, {"word": "密不可分", "pinyin": "mìbùkěfēn", "hanviet": "mật bất khả phân", "meaning": "gắn bó không thể tách rời"}, {"word": "沙丘", "pinyin": "shāqiū", "hanviet": "sa khâu", "meaning": "cồn cát; đồi cát"}, {"word": "缩减", "pinyin": "suōjiǎn", "hanviet": "súc giảm", "meaning": "cắt giảm; thu hẹp"}, {"word": "退化", "pinyin": "tuìhuà", "hanviet": "thoái hóa", "meaning": "thoái hóa; suy thoái"}, {"word": "掀翻", "pinyin": "xiānfān", "hanviet": "hiên phiên", "meaning": "lật đổ; hất tung"}, {"word": "虚拟", "pinyin": "xūnǐ", "hanviet": "hư nghĩ", "meaning": "ảo; hư cấu (không có thật)"}, {"word": "淹没", "pinyin": "yānmò", "hanviet": "yêm một", "meaning": "nhấn chìm; ngập"}, {"word": "遥远", "pinyin": "yáoyuǎn", "hanviet": "diêu viễn", "meaning": "xa xôi; xa vời"}, {"word": "占领", "pinyin": "zhànlǐng", "hanviet": "chiếm lĩnh", "meaning": "chiếm đóng; chiếm lĩnh"}, {"word": "治愈", "pinyin": "zhìyù", "hanviet": "trị dũ", "meaning": "chữa khỏi; chữa lành"}, {"word": "琢磨", "pinyin": "zuómo", "hanviet": "trác ma", "meaning": "nghiền ngẫm; mài giũa"}, {"word": "保佑", "pinyin": "bǎoyòu", "hanviet": "bảo hựu", "meaning": "phù hộ; che chở"}];
 var flashDeck = [], flashIdx = 0;
 function flashShuffleDeck() {
   flashDeck = FLASH_DATA.map(function (w) { return { w: w, hanziFront: Math.random() < 0.5 }; });
