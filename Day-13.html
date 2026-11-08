@@ -277,7 +277,7 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="flashNext()">Tiếp ➡</button>
 <button class="btn-sm" onclick="flashReshuffle()">🔀 Trộn lại</button>
 <span class="flash-count" id="flash-count"></span>
-</div></div>
+</div></div><style>#flash-wrap .flash-card{height:216px}#flash-wrap .flash-ex{margin-top:7px;font-size:1.02rem;line-height:2;color:#1e3a8a}#flash-wrap .flash-ex ruby rt{font-size:.52em;color:#2563eb}#flash-wrap .flash-ex-label{font-size:.8rem;font-weight:700;color:#64748b}#flash-wrap .flash-ex-vi{font-size:.86rem;color:#475569}</style>
 <div class="card">
 <h2>1. 全民 — quánmín · toàn dân <span class="badge">Danh từ</span></h2>
 <div class="word-meaning">Nghĩa: <b>toàn dân</b></div>
@@ -769,7 +769,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>🎧 Bài 8: Nghe hội thoại – Suy luận <span class="badge">Nghe hiểu Cao cấp 4</span></h2>
-<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (6 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: 小红每天看手机，全民数字化改变生活，但她和朋友疏远了，决定明天一起吃饭。</div>
+<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (12 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: Bây giờ ai cũng dùng điện thoại, đời sống đã số hóa, nhưng xem lâu thì mắt khổ và bạn bè dần xa cách.</div>
 <div class="reading-box">
 <div class="reading-Controls dlg-controls-row">
 <span class="hint">Tốc độ:</span>
@@ -782,51 +782,57 @@ img, svg { max-width: 100%; }
 </div>
 <div id="dlg-voice-pickers" style="margin-top:8px;"><span class="hint">Đang kiểm tra giọng đọc trên thiết bị…</span></div>
 <div class="hint" id="dlg-voice-note" style="margin-top:4px;"></div>
-<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button></div>
+<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button> <button class="tts-btn" onclick="playDlgLine(8)">9</button> <button class="tts-btn" onclick="playDlgLine(9)">10</button> <button class="tts-btn" onclick="playDlgLine(10)">11</button> <button class="tts-btn" onclick="playDlgLine(11)">12</button></div>
 <div class="dlg-script" id="dlg-script" style="display:none">
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>每<rt>měi</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>数<rt>shù</rt></ruby><ruby>字<rt>zì</rt></ruby><ruby>化<rt>huà</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。</span><div class="dlg-vi">Đúng, ngày nào tớ cũng xem điện thoại, số hóa rất tốt.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>全<rt>Quán</rt></ruby><ruby>民<rt>mín</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>数<rt>shù</rt></ruby><ruby>字<rt>zì</rt></ruby><ruby>化<rt>huà</rt></ruby><ruby>改<rt>gǎi</rt></ruby><ruby>变<rt>biàn</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>活<rt>huó</rt></ruby>。</span><div class="dlg-vi">Toàn dân đều xem điện thoại, số hóa thay đổi cuộc sống.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>不<rt>Bù</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>疏<rt>shū</rt></ruby><ruby>远<rt>yuǎn</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>担<rt>dān</rt></ruby><ruby>心<rt>xīn</rt></ruby>。</span><div class="dlg-vi">Không, tớ và bạn bè xa cách rồi, tớ rất lo lắng.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>疏<rt>shū</rt></ruby><ruby>远<rt>yuǎn</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>应<rt>yīng</rt></ruby><ruby>该<rt>gāi</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。</span><div class="dlg-vi">Cậu và bạn bè xa cách rồi, cậu nên cùng bạn bè ăn cơm.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>不<rt>bú</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。</span><div class="dlg-vi">Được, ngày mai tớ cùng bạn bè ăn cơm, không xem điện thoại.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Được, ngày mai cậu cùng bạn bè ăn cơm, tớ cùng cậu đi.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>hóng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>看<rt>kàn</rt></ruby>，<ruby>现<rt>xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>老<rt>lǎo</rt></ruby><ruby>人<rt>rén</rt></ruby>、<ruby>孩<rt>hái</rt></ruby><ruby>子<rt>zi</rt></ruby>，<ruby>都<rt>dōu</rt></ruby><ruby>看<rt>kàn</rt></ruby>。</span><div class="dlg-vi">Tiểu Hồng, cậu xem, bây giờ mọi người đều xem điện thoại, người già, trẻ em, đều xem.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>现<rt>xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>全<rt>quán</rt></ruby><ruby>民<rt>mín</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>用<rt>yòng</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>连<rt>lián</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>用<rt>yòng</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>闻<rt>wén</rt></ruby><ruby>了<rt>le</rt></ruby>。</span><div class="dlg-vi">Ừ, bây giờ toàn dân đều dùng điện thoại, ngay cả bố tớ cũng dùng điện thoại xem tin tức.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>现<rt>Xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>活<rt>huó</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>数<rt>shù</rt></ruby><ruby>字<rt>zì</rt></ruby><ruby>化<rt>huà</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>买<rt>mǎi</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>、<ruby>看<rt>kàn</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>闻<rt>wén</rt></ruby>，<ruby>都<rt>dōu</rt></ruby><ruby>用<rt>yòng</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。</span><div class="dlg-vi">Cuộc sống bây giờ đều số hóa rồi, mua đồ, xem tin tức, đều dùng điện thoại.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>可<rt>Kě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>间<rt>jiān</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>长<rt>zhǎng</rt></ruby>，<ruby>眼<rt>yǎn</rt></ruby><ruby>睛<rt>jīng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>受<rt>shòu</rt></ruby><ruby>罪<rt>zuì</rt></ruby>。</span><div class="dlg-vi">Nhưng xem điện thoại quá lâu, mắt rất khổ.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>眼<rt>yǎn</rt></ruby><ruby>睛<rt>jīng</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>舒<rt>shū</rt></ruby><ruby>服<rt>fu</rt></ruby>。<ruby>朋<rt>Péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>自<rt>zì</rt></ruby><ruby>己<rt>jǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。</span><div class="dlg-vi">Mắt tớ cũng không thoải mái. Bạn bè ở bên nhau, cũng đều xem điện thoại của mình.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>样<rt>yàng</rt></ruby>，<ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>疏<rt>shū</rt></ruby><ruby>远<rt>yuǎn</rt></ruby><ruby>了<rt>le</rt></ruby>。</span><div class="dlg-vi">Như vậy, bạn bè sẽ dần xa cách.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>说<rt>shuō</rt></ruby>，<ruby>有<rt>yǒu</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>有<rt>yǒu</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>侵<rt>qīn</rt></ruby><ruby>入<rt>rù</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>钱<rt>qián</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>了<rt>le</rt></ruby>。</span><div class="dlg-vi">Tớ nghe nói, có người điện thoại bị người ta xâm nhập, tiền đều mất hết.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>密<rt>mì</rt></ruby><ruby>码<rt>mǎ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>长<rt>zhǎng</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>怕<rt>pà</rt></ruby>。<ruby>可<rt>Kě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>密<rt>mì</rt></ruby><ruby>码<rt>mǎ</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>长<rt>zhǎng</rt></ruby>。</span><div class="dlg-vi">Mật khẩu của tớ rất dài, tớ không sợ. Nhưng mật khẩu của bố tớ không dài.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>告<rt>gào</rt></ruby><ruby>诉<rt>su</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby>，<ruby>密<rt>mì</rt></ruby><ruby>码<rt>mǎ</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>长<rt>zhǎng</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>儿<rt>ér</rt></ruby>。</span><div class="dlg-vi">Cậu nói với bố cậu, mật khẩu phải dài hơn một chút.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>告<rt>gào</rt></ruby><ruby>诉<rt>su</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>呀<rt>ya</rt></ruby>！<ruby>对<rt>Duì</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>不<rt>bú</rt></ruby><ruby>带<rt>dài</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Hôm nay tớ sẽ đi nói với ông ấy! À đúng rồi, ngày mai chúng ta cùng ăn cơm, không mang điện thoại, được không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>，<ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>带<rt>dài</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby>。</span><div class="dlg-vi">Được, ngày mai chúng ta không mang điện thoại, ăn cơm thật ngon, ở bên nhau thật vui.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>，<ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>见<rt>jiàn</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>早<rt>zǎo</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>来<rt>lái</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>等<rt>děng</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>呀<rt>ya</rt></ruby>！</span><div class="dlg-vi">Được, mai gặp nhé! Cậu đến sớm một chút, tớ đợi cậu!</div></div>
 </div>
 <div class="hint" id="dlg-tip">💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.</div>
 </div>
 <div class="q-item" id="dlg-1">
-<div><b>Câu 1.</b> 小红每天看手机吗？</div>
+<div><b>Câu 1.</b> 现在大家怎么样？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，我每天看手机，数字化很好。')">A. 工作</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，我每天看手机，数字化很好。')">B. 学习</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，我每天看手机，数字化很好。')">C. 看电影</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小红：是，我每天看手机，数字化很好。')">D. 看手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，现在全民都用手机，连我爸爸也用手机看新闻了。')">A. 孩子不用手机</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小红：是，现在全民都用手机，连我爸爸也用手机看新闻了。')">B. 全民都用手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，现在全民都用手机，连我爸爸也用手机看新闻了。')">C. 老人不用手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，现在全民都用手机，连我爸爸也用手机看新闻了。')">D. 大家都不用手机</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-2">
-<div><b>Câu 2.</b> 全民都看手机吗？</div>
+<div><b>Câu 2.</b> 看手机的时间太长，什么很受罪？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：全民都看手机，数字化改变生活。')">A. 都学习</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：全民都看手机，数字化改变生活。')">B. 都工作</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小明：全民都看手机，数字化改变生活。')">C. 都看手机</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：全民都看手机，数字化改变生活。')">D. 都不看手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：可是看手机的时间太长，眼睛很受罪。')">A. 电视</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：可是看手机的时间太长，眼睛很受罪。')">B. 手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：可是看手机的时间太长，眼睛很受罪。')">C. 头发</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小红：可是看手机的时间太长，眼睛很受罪。')">D. 眼睛</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-3">
-<div><b>Câu 3.</b> 小红和朋友怎么样？</div>
+<div><b>Câu 3.</b> 朋友都看自己的手机，会怎么样？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：不，我和朋友疏远了，我很担心。')">A. 很忙</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小红：不，我和朋友疏远了，我很担心。')">B. 疏远了</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：不，我和朋友疏远了，我很担心。')">C. 很高兴</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：不，我和朋友疏远了，我很担心。')">D. 很密切</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：这样，朋友就疏远了。')">A. 朋友会买新手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：这样，朋友就疏远了。')">B. 朋友会更高兴</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小红：这样，朋友就疏远了。')">C. 朋友会疏远</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：这样，朋友就疏远了。')">D. 朋友会一起吃饭</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-4">
-<div><b>Câu 4.</b> 小红明天和朋友一起吃饭吗？</div>
+<div><b>Câu 4.</b> 他们明天吃饭的时候做什么？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小红：好，我明天和朋友一起吃饭，不看手机。')">A. 和朋友一起吃饭</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：好，我明天和朋友一起吃饭，不看手机。')">B. 学习</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：好，我明天和朋友一起吃饭，不看手机。')">C. 工作</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：好，我明天和朋友一起吃饭，不看手机。')">D. 看手机</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小红：我今天就去告诉他呀！对了，明天我们一起吃饭，不带手机，好吗？')">A. 不带手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：我今天就去告诉他呀！对了，明天我们一起吃饭，不带手机，好吗？')">B. 看新闻</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：我今天就去告诉他呀！对了，明天我们一起吃饭，不带手机，好吗？')">C. 带手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：我今天就去告诉他呀！对了，明天我们一起吃饭，不带手机，好吗？')">D. 用手机买东西</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -874,7 +880,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 5 (Đoạn văn):</b> 全民 → 入侵 → 受罪 → 疏远 → 数字化</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 全民都用手机学习，可是手机入侵了大家的生活，手机的信息侵入了大家的时间，他觉得很困扰。<br>2. 他每天都看手机，学习也不好，他想数字化学习，可是手机妨碍他，他觉得受罪，很难过。<br>3. 他疏远了朋友，也冷落了家人，朋友说，数字化改变了他的工作，也改变了他的学习，他要学习。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. A — 媒介 &nbsp;|&nbsp; 2. A — 工作和学习 &nbsp;|&nbsp; 3. A — 矛盾</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 看手机 &nbsp; 2. C — 都看手机 &nbsp; 3. B — 疏远了 &nbsp; 4. A — 和朋友一起吃饭</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. B — 全民都用手机 &nbsp; 2. D — 眼睛 &nbsp; 3. C — 朋友会疏远 &nbsp; 4. A — 不带手机</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -990,20 +996,20 @@ var ITEM_INFO = {
     "A — 矛盾"
   ],
   "dlg-1": [
-    "Nghe hội thoại 1 (小红每天看手机吗？)",
-    "看手机"
+    "Nghe hội thoại 1 (现在大家怎么样？)",
+    "全民都用手机"
   ],
   "dlg-2": [
-    "Nghe hội thoại 2 (全民都看手机吗？)",
-    "都看手机"
+    "Nghe hội thoại 2 (看手机的时间太长，什么很受罪？)",
+    "眼睛"
   ],
   "dlg-3": [
-    "Nghe hội thoại 3 (小红和朋友怎么样？)",
-    "疏远了"
+    "Nghe hội thoại 3 (朋友都看自己的手机，会怎么样？)",
+    "朋友会疏远"
   ],
   "dlg-4": [
-    "Nghe hội thoại 4 (小红明天和朋友一起吃饭吗？)",
-    "和朋友一起吃饭"
+    "Nghe hội thoại 4 (他们明天吃饭的时候做什么？)",
+    "不带手机"
   ],
   "py-1": [
     "Pinyin: 全民",
@@ -4141,7 +4147,7 @@ restore();
 </script>
 <script>
 // ====== Flashcard ôn tập (mọi từ đã học các ngày trước; chiều thẻ ngẫu nhiên) ======
-var FLASH_DATA = [{"word": "从容", "pinyin": "cóngróng", "hanviet": "tòng dung", "meaning": "bình tĩnh, ung dung, thong dong"}, {"word": "电线杆", "pinyin": "diànxiàngān", "hanviet": "điện tuyến can", "meaning": "cột điện"}, {"word": "发扬光大", "pinyin": "fāyáng-guāngdà", "hanviet": "phát dương quang đại", "meaning": "phát huy và làm rạng rỡ (truyền thống, văn hóa)"}, {"word": "妨碍", "pinyin": "fáng'ài", "hanviet": "phương ngại", "meaning": "cản trở, gây trở ngại"}, {"word": "访客", "pinyin": "fǎngkè", "hanviet": "phỏng khách", "meaning": "khách đến thăm"}, {"word": "负担", "pinyin": "fùdān", "hanviet": "phụ đảm", "meaning": "gánh nặng; trách nhiệm phải gánh"}, {"word": "干扰", "pinyin": "gānrǎo", "hanviet": "can nhiễu", "meaning": "quấy nhiễu, làm nhiễu"}, {"word": "更新", "pinyin": "gēngxīn", "hanviet": "canh tân", "meaning": "cập nhật, đổi mới"}, {"word": "胡乱", "pinyin": "húluàn", "hanviet": "hồ loạn", "meaning": "bừa bãi, lung tung, tùy tiện"}, {"word": "极端", "pinyin": "jíduān", "hanviet": "cực đoan", "meaning": "cực đoan"}, {"word": "开销", "pinyin": "kāixiāo", "hanviet": "khai tiêu", "meaning": "chi phí, chi tiêu (sinh hoạt)"}, {"word": "开支", "pinyin": "kāizhī", "hanviet": "khai chi", "meaning": "chi tiêu, khoản chi"}, {"word": "困扰", "pinyin": "kùnrǎo", "hanviet": "khốn nhiễu", "meaning": "làm khó chịu, làm phiền muộn"}, {"word": "冷落", "pinyin": "lěngluò", "hanviet": "lãnh lạc", "meaning": "lạnh nhạt, thờ ơ (với ai)"}, {"word": "矛盾", "pinyin": "máodùn", "hanviet": "mâu thuẫn", "meaning": "mâu thuẫn"}, {"word": "媒介", "pinyin": "méijiè", "hanviet": "môi giới", "meaning": "phương tiện truyền thông; môi giới, trung gian"}, {"word": "密切", "pinyin": "mìqiè", "hanviet": "mật thiết", "meaning": "mật thiết, khăng khít"}, {"word": "配件", "pinyin": "pèijiàn", "hanviet": "phối kiện", "meaning": "phụ kiện, linh kiện"}, {"word": "侵入", "pinyin": "qīnrù", "hanviet": "xâm nhập", "meaning": "xâm nhập"}, {"word": "轻而易举", "pinyin": "qīng'éryìjǔ", "hanviet": "khinh nhi dị cử", "meaning": "dễ dàng, dễ như trở bàn tay"}];
+var FLASH_DATA = [{"word": "从容", "pinyin": "cóngróng", "hanviet": "tòng dung", "meaning": "bình tĩnh, ung dung, thong dong", "exr": "<ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>从<rt>cóng</rt></ruby><ruby>容<rt>róng</rt></ruby>。", "exv": "Hôm nay anh ấy rất bình tĩnh."}, {"word": "电线杆", "pinyin": "diànxiàngān", "hanviet": "điện tuyến can", "meaning": "cột điện", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>线<rt>xiàn</rt></ruby><ruby>杆<rt>gān</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby>。", "exv": "Cột điện này ở đó."}, {"word": "发扬光大", "pinyin": "fāyáng-guāngdà", "hanviet": "phát dương quang đại", "meaning": "phát huy và làm rạng rỡ (truyền thống, văn hóa)", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>发<rt>fā</rt></ruby><ruby>扬<rt>yáng</rt></ruby><ruby>光<rt>guāng</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>礼<rt>lǐ</rt></ruby><ruby>仪<rt>yí</rt></ruby>。", "exv": "Chúng ta phát huy và làm rạng rỡ lễ nghi."}, {"word": "妨碍", "pinyin": "fáng'ài", "hanviet": "phương ngại", "meaning": "cản trở, gây trở ngại", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>妨<rt>fáng</rt></ruby><ruby>碍<rt>ài</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。", "exv": "Anh ấy đã cản trở tôi."}, {"word": "访客", "pinyin": "fǎngkè", "hanviet": "phỏng khách", "meaning": "khách đến thăm", "exr": "<ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>访<rt>fǎng</rt></ruby><ruby>客<rt>kè</rt></ruby>。", "exv": "Hôm nay có khách đến thăm."}, {"word": "负担", "pinyin": "fùdān", "hanviet": "phụ đảm", "meaning": "gánh nặng; trách nhiệm phải gánh", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>负<rt>fù</rt></ruby><ruby>担<rt>dān</rt></ruby>。", "exv": "Tôi có gánh nặng này."}, {"word": "干扰", "pinyin": "gānrǎo", "hanviet": "can nhiễu", "meaning": "quấy nhiễu, làm nhiễu", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>干<rt>gān</rt></ruby><ruby>扰<rt>rǎo</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>沉<rt>chén</rt></ruby><ruby>思<rt>sī</rt></ruby>。", "exv": "Anh ấy đã quấy rầy sự trầm tư của tôi."}, {"word": "更新", "pinyin": "gēngxīn", "hanviet": "canh tân", "meaning": "cập nhật, đổi mới", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>更<rt>gēng</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby>。", "exv": "Chúng tôi đã cập nhật cái này."}, {"word": "胡乱", "pinyin": "húluàn", "hanviet": "hồ loạn", "meaning": "bừa bãi, lung tung, tùy tiện", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>胡<rt>hú</rt></ruby><ruby>乱<rt>luàn</rt></ruby>。", "exv": "Anh ấy rất bừa bãi."}, {"word": "极端", "pinyin": "jíduān", "hanviet": "cực đoan", "meaning": "cực đoan", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>极<rt>jí</rt></ruby><ruby>端<rt>duān</rt></ruby>。", "exv": "Anh ấy rất cực đoan."}, {"word": "开销", "pinyin": "kāixiāo", "hanviet": "khai tiêu", "meaning": "chi phí, chi tiêu (sinh hoạt)", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>预<rt>yù</rt></ruby><ruby>计<rt>jì</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>销<rt>xiāo</rt></ruby>。", "exv": "Tôi đã dự tính khoản chi phí này."}, {"word": "开支", "pinyin": "kāizhī", "hanviet": "khai chi", "meaning": "chi tiêu, khoản chi", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>开<rt>kāi</rt></ruby><ruby>支<rt>zhī</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>损<rt>sǔn</rt></ruby><ruby>失<rt>shī</rt></ruby>。", "exv": "Khoản chi này là tổn thất."}, {"word": "困扰", "pinyin": "kùnrǎo", "hanviet": "khốn nhiễu", "meaning": "làm khó chịu, làm phiền muộn", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>困<rt>kùn</rt></ruby><ruby>扰<rt>rǎo</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。", "exv": "Điều này đã làm tôi phiền muộn."}, {"word": "冷落", "pinyin": "lěngluò", "hanviet": "lãnh lạc", "meaning": "lạnh nhạt, thờ ơ (với ai)", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>冷<rt>lěng</rt></ruby><ruby>落<rt>luò</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。", "exv": "Anh ấy đã lạnh nhạt với tôi."}, {"word": "矛盾", "pinyin": "máodùn", "hanviet": "mâu thuẫn", "meaning": "mâu thuẫn", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>矛<rt>máo</rt></ruby><ruby>盾<rt>dùn</rt></ruby>。", "exv": "Chúng tôi có mâu thuẫn này."}, {"word": "媒介", "pinyin": "méijiè", "hanviet": "môi giới", "meaning": "phương tiện truyền thông; môi giới, trung gian", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>媒<rt>méi</rt></ruby><ruby>介<rt>jiè</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby>。", "exv": "Phương tiện này ở đó."}, {"word": "密切", "pinyin": "mìqiè", "hanviet": "mật thiết", "meaning": "mật thiết, khăng khít", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>伴<rt>bàn</rt></ruby><ruby>侣<rt>lǚ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>密<rt>mì</rt></ruby><ruby>切<rt>qiè</rt></ruby>。", "exv": "Tôi và bạn đời rất thân thiết."}, {"word": "配件", "pinyin": "pèijiàn", "hanviet": "phối kiện", "meaning": "phụ kiện, linh kiện", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>配<rt>pèi</rt></ruby><ruby>件<rt>jiàn</rt></ruby>。", "exv": "Tôi có phụ kiện này."}, {"word": "侵入", "pinyin": "qīnrù", "hanviet": "xâm nhập", "meaning": "xâm nhập", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>侵<rt>qīn</rt></ruby><ruby>入<rt>rù</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>那<rt>nà</rt></ruby>。", "exv": "Anh ấy đã xâm nhập vào đó."}, {"word": "轻而易举", "pinyin": "qīng'éryìjǔ", "hanviet": "khinh nhi dị cử", "meaning": "dễ dàng, dễ như trở bàn tay", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>轻<rt>qīng</rt></ruby><ruby>而<rt>ér</rt></ruby><ruby>易<rt>yì</rt></ruby><ruby>举<rt>jǔ</rt></ruby>。", "exv": "Việc này đối với anh ấy dễ như trở bàn tay."}];
 var flashDeck = [], flashIdx = 0;
 function flashShuffleDeck() {
   flashDeck = FLASH_DATA.map(function (w) { return { w: w, hanziFront: Math.random() < 0.5 }; });
@@ -4155,11 +4161,11 @@ function flashRender() {
   var cur = flashDeck[flashIdx], w = cur.w;
   var front = document.getElementById('flash-front'), back = document.getElementById('flash-back');
   if (cur.hanziFront) {
-    front.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Nghĩa</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-hanzi">' + w.word + '</div>';
+    back.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   } else {
-    front.innerHTML = '<div class="flash-tag">Nghĩa tiếng Việt</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div>';
+    back.innerHTML = '<div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   }
   document.getElementById('flash-card').classList.remove('flipped');
   document.getElementById('flash-count').textContent = 'Thẻ ' + (flashIdx + 1) + ' / ' + flashDeck.length;
@@ -4184,7 +4190,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
-var DLG_LINES = [{"sp": "hong", "zh": "是，我每天看手机，数字化很好。"}, {"sp": "ming", "zh": "全民都看手机，数字化改变生活。"}, {"sp": "hong", "zh": "不，我和朋友疏远了，我很担心。"}, {"sp": "ming", "zh": "你和朋友疏远了，你应该和朋友一起吃饭。"}, {"sp": "hong", "zh": "好，我明天和朋友一起吃饭，不看手机。"}, {"sp": "ming", "zh": "好，你明天和朋友一起吃饭，我和你一起去。"}];
+var DLG_LINES = [{"sp": "ming", "zh": "小红，你看，现在大家都看手机，老人、孩子，都看。"}, {"sp": "hong", "zh": "是，现在全民都用手机，连我爸爸也用手机看新闻了。"}, {"sp": "ming", "zh": "现在的生活都数字化了，买东西、看新闻，都用手机。"}, {"sp": "hong", "zh": "可是看手机的时间太长，眼睛很受罪。"}, {"sp": "ming", "zh": "我的眼睛也不舒服。朋友在一起，也都看自己的手机。"}, {"sp": "hong", "zh": "这样，朋友就疏远了。"}, {"sp": "ming", "zh": "我听说，有的人的手机，有人侵入了，钱都没有了。"}, {"sp": "hong", "zh": "我的密码很长，我不怕。可是我爸爸的密码不长。"}, {"sp": "ming", "zh": "你告诉你爸爸，密码要长一点儿。"}, {"sp": "hong", "zh": "我今天就去告诉他呀！对了，明天我们一起吃饭，不带手机，好吗？"}, {"sp": "ming", "zh": "好，明天我们不带手机，好好吃饭，好好在一起。"}, {"sp": "hong", "zh": "好，明天见！你早点儿来，我等你呀！"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;

@@ -277,7 +277,7 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="flashNext()">Tiếp ➡</button>
 <button class="btn-sm" onclick="flashReshuffle()">🔀 Trộn lại</button>
 <span class="flash-count" id="flash-count"></span>
-</div></div>
+</div></div><style>#flash-wrap .flash-card{height:216px}#flash-wrap .flash-ex{margin-top:7px;font-size:1.02rem;line-height:2;color:#1e3a8a}#flash-wrap .flash-ex ruby rt{font-size:.52em;color:#2563eb}#flash-wrap .flash-ex-label{font-size:.8rem;font-weight:700;color:#64748b}#flash-wrap .flash-ex-vi{font-size:.86rem;color:#475569}</style>
 <div class="card">
 <h2>1. 损失 — sǔnshī · tổn thất <span class="badge">Động từ</span></h2>
 <div class="word-meaning">Nghĩa: <b>tổn thất; thiệt hại</b></div>
@@ -780,7 +780,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>🎧 Bài 8: Nghe hội thoại – Suy luận <span class="badge">Nghe hiểu Cao cấp 4</span></h2>
-<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (8 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: Tiểu Hồng mặc bộ đồ đỏ nổi bật, bố cô nghiện thuốc lá và hôm qua làm mất điện thoại, nhân viên phục vụ đã tìm lại giúp ông.</div>
+<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (12 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: Tiểu Hồng mặc bộ đồ đỏ nổi bật, bố cô nghiện thuốc lá và hôm qua làm mất điện thoại, nhân viên phục vụ đã tìm lại giúp ông.</div>
 <div class="reading-box">
 <div class="reading-Controls dlg-controls-row">
 <span class="hint">Tốc độ:</span>
@@ -793,53 +793,57 @@ img, svg { max-width: 100%; }
 </div>
 <div id="dlg-voice-pickers" style="margin-top:8px;"><span class="hint">Đang kiểm tra giọng đọc trên thiết bị…</span></div>
 <div class="hint" id="dlg-voice-note" style="margin-top:4px;"></div>
-<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button></div>
+<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button> <button class="tts-btn" onclick="playDlgLine(8)">9</button> <button class="tts-btn" onclick="playDlgLine(9)">10</button> <button class="tts-btn" onclick="playDlgLine(10)">11</button> <button class="tts-btn" onclick="playDlgLine(11)">12</button></div>
 <div class="dlg-script" id="dlg-script" style="display:none">
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>Hóng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>穿<rt>chuān</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>色<rt>sè</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>衣<rt>yī</rt></ruby><ruby>服<rt>fu</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>显<rt>xiǎn</rt></ruby><ruby>眼<rt>yǎn</rt></ruby>。</span><div class="dlg-vi">Tiểu Hồng, hôm nay cậu mặc đồ đỏ, rất nổi bật.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>烟<rt>yān</rt></ruby><ruby>瘾<rt>yǐn</rt></ruby>，<ruby>医<rt>yī</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>需<rt>xū</rt></ruby><ruby>要<rt>yào</rt></ruby><ruby>休<rt>xiū</rt></ruby><ruby>息<rt>xi</rt></ruby>。</span><div class="dlg-vi">Đúng, bố tớ nghiện thuốc lá, bác sĩ nói ông ấy cần nghỉ ngơi.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>有<rt>Yǒu</rt></ruby><ruby>烟<rt>yān</rt></ruby><ruby>瘾<rt>yǐn</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>健<rt>jiàn</rt></ruby><ruby>康<rt>kāng</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>应<rt>yīng</rt></ruby><ruby>该<rt>gāi</rt></ruby><ruby>休<rt>xiū</rt></ruby><ruby>息<rt>xi</rt></ruby>。<ruby>烟<rt>Yān</rt></ruby><ruby>草<rt>cǎo</rt></ruby><ruby>税<rt>shuì</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby>。</span><div class="dlg-vi">Nghiện thuốc lá không tốt cho sức khỏe, ông ấy nên nghỉ ngơi. Thuế thuốc lá rất cao.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>昨<rt>zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>损<rt>sǔn</rt></ruby><ruby>失<rt>shī</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>难<rt>nán</rt></ruby><ruby>过<rt>guò</rt></ruby>。</span><div class="dlg-vi">Đúng, hôm qua ông ấy mất điện thoại, ông ấy rất buồn.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>儿<rt>ér</rt></ruby>？<ruby>谁<rt>Shéi</rt></ruby><ruby>找<rt>zhǎo</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>？</span><div class="dlg-vi">Điện thoại của ông ấy ở đâu? Ai tìm được điện thoại của ông ấy?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>服<rt>fú</rt></ruby><ruby>务<rt>wù</rt></ruby><ruby>员<rt>yuán</rt></ruby><ruby>找<rt>zhǎo</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。</span><div class="dlg-vi">Đúng, nhân viên phục vụ tìm được điện thoại của ông ấy, ông ấy rất vui.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>，<ruby>对<rt>duì</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Được, ông ấy rất vui, cậu cũng rất vui, đúng không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>他<rt>tā</rt></ruby>。</span><div class="dlg-vi">Đúng, tớ rất vui, hôm nay tớ đi thăm ông ấy.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>hóng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>穿<rt>chuān</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>色<rt>sè</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>衣<rt>yī</rt></ruby><ruby>服<rt>fú</rt></ruby>，<ruby>真<rt>zhēn</rt></ruby><ruby>显<rt>xiǎn</rt></ruby><ruby>眼<rt>yǎn</rt></ruby><ruby>啊<rt>a</rt></ruby>！</span><div class="dlg-vi">Tiểu Hồng, hôm nay cậu mặc đồ đỏ, nổi bật thật đấy!</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>色<rt>sè</rt></ruby>。<ruby>对<rt>Duì</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>特<rt>tè</rt></ruby><ruby>别<rt>bié</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。</span><div class="dlg-vi">Thật à? Tớ rất thích màu đỏ. À đúng rồi, hôm nay tớ đặc biệt vui.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>为<rt>wèi</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>？</span><div class="dlg-vi">Sao cậu vui thế?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>昨<rt>zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>损<rt>sǔn</rt></ruby><ruby>失<rt>shī</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>难<rt>nán</rt></ruby><ruby>过<rt>guò</rt></ruby>。<ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>服<rt>fú</rt></ruby><ruby>务<rt>wù</rt></ruby><ruby>员<rt>yuán</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>话<rt>huà</rt></ruby><ruby>说<rt>shuō</rt></ruby>，<ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>找<rt>zhǎo</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>了<rt>le</rt></ruby>！</span><div class="dlg-vi">Hôm qua bố tớ làm mất điện thoại, ông ấy rất buồn. Hôm nay nhân viên phục vụ gọi điện nói đã tìm thấy điện thoại rồi!</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>太<rt>Tài</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>了<rt>le</rt></ruby>！<ruby>服<rt>Fú</rt></ruby><ruby>务<rt>wù</rt></ruby><ruby>员<rt>yuán</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>找<rt>zhǎo</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>的<rt>de</rt></ruby>？</span><div class="dlg-vi">Tốt quá! Nhân viên phục vụ tìm thấy ở đâu?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>在<rt>Zài</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>里<rt>lǐ</rt></ruby>。<ruby>爸<rt>Bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>昨<rt>zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>忘<rt>wàng</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>饭<rt>fàn</rt></ruby><ruby>店<rt>diàn</rt></ruby><ruby>了<rt>le</rt></ruby>。</span><div class="dlg-vi">Ở nhà hàng. Hôm qua bố ăn cơm ở nhà hàng, điện thoại để quên ở nhà hàng.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>现<rt>xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>吧<rt>ba</rt></ruby>？</span><div class="dlg-vi">Bây giờ bố cậu vui rồi chứ?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。<ruby>他<rt>Tā</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>说<rt>shuō</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>后<rt>hòu</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>抽<rt>chōu</rt></ruby><ruby>烟<rt>yān</rt></ruby><ruby>了<rt>le</rt></ruby>。</span><div class="dlg-vi">Ông ấy rất vui. Ông ấy còn nói, sau này sẽ không hút thuốc nữa.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>爸<rt>bà</rt></ruby><ruby>爸<rt>ba</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>烟<rt>yān</rt></ruby><ruby>瘾<rt>yǐn</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>他<rt>Tā</rt></ruby><ruby>抽<rt>chōu</rt></ruby><ruby>烟<rt>yān</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>间<rt>jiān</rt></ruby><ruby>长<rt>zhǎng</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Bố cậu có nghiện thuốc lá không? Ông ấy hút thuốc lâu chưa?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>有<rt>Yǒu</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>抽<rt>chōu</rt></ruby><ruby>烟<rt>yān</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>间<rt>jiān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>长<rt>zhǎng</rt></ruby>。<ruby>医<rt>Yī</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>说<rt>shuō</rt></ruby>，<ruby>抽<rt>chōu</rt></ruby><ruby>烟<rt>yān</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>健<rt>jiàn</rt></ruby><ruby>康<rt>kāng</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>应<rt>yīng</rt></ruby><ruby>该<rt>gāi</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>抽<rt>chōu</rt></ruby><ruby>烟<rt>yān</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>休<rt>xiū</rt></ruby><ruby>息<rt>xī</rt></ruby>。</span><div class="dlg-vi">Có, ông ấy hút thuốc đã rất lâu. Bác sĩ nói hút thuốc không tốt cho sức khỏe, ông ấy nên bỏ thuốc, nghỉ ngơi thật tốt.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>现<rt>Xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>烟<rt>yān</rt></ruby><ruby>草<rt>cǎo</rt></ruby><ruby>税<rt>shuì</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby>，<ruby>烟<rt>yān</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>贵<rt>guì</rt></ruby>。<ruby>他<rt>Tā</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>抽<rt>chōu</rt></ruby><ruby>烟<rt>yān</rt></ruby>，<ruby>健<rt>jiàn</rt></ruby><ruby>康<rt>kāng</rt></ruby><ruby>会<rt>huì</rt></ruby><ruby>更<rt>gèng</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。</span><div class="dlg-vi">Bây giờ thuế thuốc lá rất cao, thuốc lá cũng rất đắt. Ông ấy không hút thuốc, sức khỏe sẽ tốt hơn.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>对<rt>duì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>现<rt>xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>他<rt>tā</rt></ruby>，<ruby>告<rt>gào</rt></ruby><ruby>诉<rt>su</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>找<rt>zhǎo</rt></ruby><ruby>到<rt>dào</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>定<rt>dìng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby><ruby>啊<rt>a</rt></ruby>！</span><div class="dlg-vi">Cậu nói đúng, bây giờ tớ đi thăm ông ấy ngay, nói với ông ấy là đã tìm thấy điện thoại, ông ấy nhất định rất vui!</div></div>
 </div>
 <div class="hint" id="dlg-tip">💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.</div>
 </div>
 <div class="q-item" id="dlg-1">
-<div><b>Câu 1.</b> 小红的爸爸有什么？</div>
+<div><b>Câu 1.</b> 小红今天穿什么颜色的衣服？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，我的爸爸有烟瘾，医生说他需要休息。')">A. 电影</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，我的爸爸有烟瘾，医生说他需要休息。')">B. 手机</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小红：是，我的爸爸有烟瘾，医生说他需要休息。')">C. 烟瘾</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：是，我的爸爸有烟瘾，医生说他需要休息。')">D. 衣服</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小明：小红，你今天穿红色的衣服，真显眼啊！')">A. 蓝色的</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小明：小红，你今天穿红色的衣服，真显眼啊！')">B. 黑色的</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小明：小红，你今天穿红色的衣服，真显眼啊！')">C. 白色的</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小明：小红，你今天穿红色的衣服，真显眼啊！')">D. 红色的</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-2">
-<div><b>Câu 2.</b> 小红的爸爸为什么难过？</div>
+<div><b>Câu 2.</b> 小红的爸爸昨天怎么了？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：是，他昨天损失了他的手机，他很难过。')">A. 因为他看电影</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：是，他昨天损失了他的手机，他很难过。')">B. 因为他去公园</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：是，他昨天损失了他的手机，他很难过。')">C. 因为他去游泳</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小红：是，他昨天损失了他的手机，他很难过。')">D. 因为他损失了他的手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：我爸爸昨天损失了手机，他很难过。')">A. 他买了新手机</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小红：我爸爸昨天损失了手机，他很难过。')">B. 他损失了手机</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：我爸爸昨天损失了手机，他很难过。')">C. 他去看电影了</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：我爸爸昨天损失了手机，他很难过。')">D. 他去旅游了</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-3">
 <div><b>Câu 3.</b> 谁找到了小红爸爸的手机？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小红：是，服务员找到了他的手机，他很高兴。')">A. 服务员</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：是，服务员找到了他的手机，他很高兴。')">B. 老师</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：是，服务员找到了他的手机，他很高兴。')">C. 朋友</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：是，服务员找到了他的手机，他很高兴。')">D. 医生</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：今天服务员打电话说，手机找到了！')">A. 医生</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：今天服务员打电话说，手机找到了！')">B. 小明</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小红：今天服务员打电话说，手机找到了！')">C. 服务员</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：今天服务员打电话说，手机找到了！')">D. 老师</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-4">
-<div><b>Câu 4.</b> 小明觉得有烟瘾怎么样？</div>
+<div><b>Câu 4.</b> 小明说什么很高？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：有烟瘾对健康不好，他应该休息。烟草税很高。')">A. 很便宜</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小明：有烟瘾对健康不好，他应该休息。烟草税很高。')">B. 对健康不好</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：有烟瘾对健康不好，他应该休息。烟草税很高。')">C. 很有意思</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：有烟瘾对健康不好，他应该休息。烟草税很高。')">D. 对健康很好</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小明：现在烟草税很高，烟也很贵。')">A. 烟草税</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：现在烟草税很高，烟也很贵。')">B. 饭很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：现在烟草税很高，烟也很贵。')">C. 衣服很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：现在烟草税很高，烟也很贵。')">D. 新手机很贵</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -887,7 +891,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 5 (Đoạn văn):</b> 损失 → 套近乎 → 显眼 → 烟草税 → 烟瘾</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 烟瘾的代价很大，他丧失了劳动力，也有了很大的损失，所以医生呼吁他不要抽烟。<br>2. 他想和医生套近乎，可是医生说，烟草税很高，抽烟很显眼，朋友都看他，他觉得很不好意思。<br>3. 他每天都不抽烟，朋友每天都来看他，他们一起学习，他觉得很舒服，也很高兴，烟瘾没有了，损失也没有了。<br>4. 他每天都抽烟，常常觉得不适，由此可见，烟瘾的代价真的很大。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. B — 医生 &nbsp;|&nbsp; 2. D — 很大 &nbsp;|&nbsp; 3. B — 医生的建议</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. C — 烟瘾 &nbsp; 2. D — 因为他损失了他的手机 &nbsp; 3. A — 服务员 &nbsp; 4. B — 对健康不好</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 红色的 &nbsp; 2. B — 他损失了手机 &nbsp; 3. C — 服务员 &nbsp; 4. A — 烟草税</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -1007,20 +1011,20 @@ var ITEM_INFO = {
     "B — 医生的建议"
   ],
   "dlg-1": [
-    "Nghe hội thoại 1 (小红的爸爸有什么？)",
-    "烟瘾"
+    "Nghe hội thoại 1 (小红今天穿什么颜色的衣服？)",
+    "红色的"
   ],
   "dlg-2": [
-    "Nghe hội thoại 2 (小红的爸爸为什么难过？)",
-    "因为他损失了他的手机"
+    "Nghe hội thoại 2 (小红的爸爸昨天怎么了？)",
+    "他损失了手机"
   ],
   "dlg-3": [
     "Nghe hội thoại 3 (谁找到了小红爸爸的手机？)",
     "服务员"
   ],
   "dlg-4": [
-    "Nghe hội thoại 4 (小明觉得有烟瘾怎么样？)",
-    "对健康不好"
+    "Nghe hội thoại 4 (小明说什么很高？)",
+    "烟草税"
   ],
   "py-1": [
     "Pinyin: 损失",
@@ -4158,7 +4162,7 @@ restore();
 </script>
 <script>
 // ====== Flashcard ôn tập (mọi từ đã học các ngày trước; chiều thẻ ngẫu nhiên) ======
-var FLASH_DATA = [{"word": "代价", "pinyin": "dàijià", "hanviet": "đại giá", "meaning": "cái giá phải trả; sự đánh đổi"}, {"word": "高速", "pinyin": "gāosù", "hanviet": "cao tốc", "meaning": "tốc độ cao; cao tốc"}, {"word": "呼吁", "pinyin": "hūyù", "hanviet": "hô dụ", "meaning": "kêu gọi; hô hào"}, {"word": "花卉", "pinyin": "huāhuì", "hanviet": "hoa hối", "meaning": "hoa cỏ; cây hoa"}, {"word": "缓解", "pinyin": "huǎnjiě", "hanviet": "hoãn giải", "meaning": "làm dịu đi; giảm nhẹ (căng thẳng, đau đớn...)"}, {"word": "交际", "pinyin": "jiāojì", "hanviet": "giao tế", "meaning": "giao tiếp xã hội; giao thiệp"}, {"word": "紧随", "pinyin": "jǐnsuí", "hanviet": "khẩn tùy", "meaning": "theo sát; bám sát ngay sau"}, {"word": "警示", "pinyin": "jǐngshì", "hanviet": "cảnh thị", "meaning": "cảnh báo; cảnh tỉnh"}, {"word": "具备", "pinyin": "jùbèi", "hanviet": "cụ bị", "meaning": "có đủ; sở hữu (điều kiện, khả năng...)"}, {"word": "劳动力", "pinyin": "láodònglì", "hanviet": "lao động lực", "meaning": "lực lượng lao động; sức lao động"}, {"word": "离异", "pinyin": "líyì", "hanviet": "ly dị", "meaning": "ly hôn; ly dị"}, {"word": "礼仪", "pinyin": "lǐyí", "hanviet": "lễ nghi", "meaning": "lễ nghi; nghi thức; phép lịch sự"}, {"word": "名山大川", "pinyin": "míngshān-dàchuān", "hanviet": "danh sơn đại xuyên", "meaning": "núi sông nổi tiếng; danh lam thắng cảnh"}, {"word": "趋势", "pinyin": "qūshì", "hanviet": "xu thế", "meaning": "xu hướng; chiều hướng phát triển"}, {"word": "染", "pinyin": "rǎn", "hanviet": "nhiễm", "meaning": "nhuộm; nhiễm (bệnh, thói xấu...)"}, {"word": "日前", "pinyin": "rìqián", "hanviet": "nhật tiền", "meaning": "mấy hôm trước; trước đây không lâu"}, {"word": "丧失", "pinyin": "sàngshī", "hanviet": "tang thất", "meaning": "đánh mất; mất đi"}, {"word": "实施", "pinyin": "shíshī", "hanviet": "thực thi", "meaning": "thi hành; thực hiện; triển khai"}, {"word": "嗜好", "pinyin": "shìhào", "hanviet": "thị hảo", "meaning": "sở thích (thường là mê mẩn); thói quen ham thích"}, {"word": "顺手", "pinyin": "shùnshǒu", "hanviet": "thuận thủ", "meaning": "tiện tay; thuận tay"}];
+var FLASH_DATA = [{"word": "代价", "pinyin": "dàijià", "hanviet": "đại giá", "meaning": "cái giá phải trả; sự đánh đổi", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>代<rt>dài</rt></ruby><ruby>价<rt>jià</rt></ruby>。", "exv": "Đây chính là cái giá phải trả."}, {"word": "高速", "pinyin": "gāosù", "hanviet": "cao tốc", "meaning": "tốc độ cao; cao tốc", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>速<rt>sù</rt></ruby>。", "exv": "Đây chính là (tốc độ) cao tốc."}, {"word": "呼吁", "pinyin": "hūyù", "hanviet": "hô dụ", "meaning": "kêu gọi; hô hào", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>呼<rt>hū</rt></ruby><ruby>吁<rt>yù</rt></ruby><ruby>他<rt>tā</rt></ruby>。", "exv": "Tôi kêu gọi anh ấy."}, {"word": "花卉", "pinyin": "huāhuì", "hanviet": "hoa hối", "meaning": "hoa cỏ; cây hoa", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>花<rt>huā</rt></ruby><ruby>卉<rt>huì</rt></ruby>。", "exv": "Anh ấy có hoa."}, {"word": "缓解", "pinyin": "huǎnjiě", "hanviet": "hoãn giải", "meaning": "làm dịu đi; giảm nhẹ (căng thẳng, đau đớn...)", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>缓<rt>huǎn</rt></ruby><ruby>解<rt>jiě</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>适<rt>shì</rt></ruby>。", "exv": "Điều này làm dịu sự khó chịu của anh ấy."}, {"word": "交际", "pinyin": "jiāojì", "hanviet": "giao tế", "meaning": "giao tiếp xã hội; giao thiệp", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>交<rt>jiāo</rt></ruby><ruby>际<rt>jì</rt></ruby>。", "exv": "Anh ấy có giao tiếp xã hội."}, {"word": "紧随", "pinyin": "jǐnsuí", "hanviet": "khẩn tùy", "meaning": "theo sát; bám sát ngay sau", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>紧<rt>jǐn</rt></ruby><ruby>随<rt>suí</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。", "exv": "Anh ấy theo sát tôi."}, {"word": "警示", "pinyin": "jǐngshì", "hanviet": "cảnh thị", "meaning": "cảnh báo; cảnh tỉnh", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>警<rt>jǐng</rt></ruby><ruby>示<rt>shì</rt></ruby>。", "exv": "Đây chính là lời cảnh báo."}, {"word": "具备", "pinyin": "jùbèi", "hanviet": "cụ bị", "meaning": "có đủ; sở hữu (điều kiện, khả năng...)", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>具<rt>jù</rt></ruby><ruby>备<rt>bèi</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby>。", "exv": "Anh ấy có (đủ) cái này."}, {"word": "劳动力", "pinyin": "láodònglì", "hanviet": "lao động lực", "meaning": "lực lượng lao động; sức lao động", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>劳<rt>láo</rt></ruby><ruby>动<rt>dòng</rt></ruby><ruby>力<rt>lì</rt></ruby>。", "exv": "Đây chính là lực lượng lao động."}, {"word": "离异", "pinyin": "líyì", "hanviet": "ly dị", "meaning": "ly hôn; ly dị", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>离<rt>lí</rt></ruby><ruby>异<rt>yì</rt></ruby><ruby>了<rt>le</rt></ruby>。", "exv": "Anh ấy đã ly hôn."}, {"word": "礼仪", "pinyin": "lǐyí", "hanviet": "lễ nghi", "meaning": "lễ nghi; nghi thức; phép lịch sự", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>礼<rt>lǐ</rt></ruby><ruby>仪<rt>yí</rt></ruby>。", "exv": "Anh ấy có lễ nghi."}, {"word": "名山大川", "pinyin": "míngshān-dàchuān", "hanviet": "danh sơn đại xuyên", "meaning": "núi sông nổi tiếng; danh lam thắng cảnh", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>名<rt>míng</rt></ruby><ruby>山<rt>shān</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>川<rt>chuān</rt></ruby>。", "exv": "Đây chính là danh sơn đại xuyên (núi sông nổi tiếng)."}, {"word": "趋势", "pinyin": "qūshì", "hanviet": "xu thế", "meaning": "xu hướng; chiều hướng phát triển", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>趋<rt>qū</rt></ruby><ruby>势<rt>shì</rt></ruby>。", "exv": "Đây chính là xu hướng."}, {"word": "染", "pinyin": "rǎn", "hanviet": "nhiễm", "meaning": "nhuộm; nhiễm (bệnh, thói xấu...)", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>染<rt>rǎn</rt></ruby><ruby>了<rt>le</rt></ruby>。", "exv": "Anh ấy nhuộm rồi."}, {"word": "日前", "pinyin": "rìqián", "hanviet": "nhật tiền", "meaning": "mấy hôm trước; trước đây không lâu", "exr": "<ruby>日<rt>Rì</rt></ruby><ruby>前<rt>qián</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>哈<rt>hā</rt></ruby><ruby>欠<rt>qian</rt></ruby><ruby>了<rt>le</rt></ruby>。", "exv": "Mấy hôm trước, anh ấy đã ngáp."}, {"word": "丧失", "pinyin": "sàngshī", "hanviet": "tang thất", "meaning": "đánh mất; mất đi", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>丧<rt>sàng</rt></ruby><ruby>失<rt>shī</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>劳<rt>láo</rt></ruby><ruby>动<rt>dòng</rt></ruby><ruby>力<rt>lì</rt></ruby>。", "exv": "Anh ấy đã mất đi lực lượng lao động."}, {"word": "实施", "pinyin": "shíshī", "hanviet": "thực thi", "meaning": "thi hành; thực hiện; triển khai", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>实<rt>shí</rt></ruby><ruby>施<rt>shī</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>处<rt>chǔ</rt></ruby><ruby>罚<rt>fá</rt></ruby>。", "exv": "Anh ấy đã thi hành hình phạt."}, {"word": "嗜好", "pinyin": "shìhào", "hanviet": "thị hảo", "meaning": "sở thích (thường là mê mẩn); thói quen ham thích", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>嗜<rt>shì</rt></ruby><ruby>好<rt>hào</rt></ruby>。", "exv": "Đây chính là sở thích của anh ấy."}, {"word": "顺手", "pinyin": "shùnshǒu", "hanviet": "thuận thủ", "meaning": "tiện tay; thuận tay", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>顺<rt>shùn</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>把<rt>bǎ</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>给<rt>gěi</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。", "exv": "Anh ấy tiện tay đưa cái này cho tôi."}];
 var flashDeck = [], flashIdx = 0;
 function flashShuffleDeck() {
   flashDeck = FLASH_DATA.map(function (w) { return { w: w, hanziFront: Math.random() < 0.5 }; });
@@ -4172,11 +4176,11 @@ function flashRender() {
   var cur = flashDeck[flashIdx], w = cur.w;
   var front = document.getElementById('flash-front'), back = document.getElementById('flash-back');
   if (cur.hanziFront) {
-    front.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Nghĩa</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-hanzi">' + w.word + '</div>';
+    back.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   } else {
-    front.innerHTML = '<div class="flash-tag">Nghĩa tiếng Việt</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div>';
+    back.innerHTML = '<div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   }
   document.getElementById('flash-card').classList.remove('flipped');
   document.getElementById('flash-count').textContent = 'Thẻ ' + (flashIdx + 1) + ' / ' + flashDeck.length;
@@ -4201,7 +4205,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
-var DLG_LINES = [{"sp": "ming", "zh": "小红，你今天穿红色的衣服，很显眼。"}, {"sp": "hong", "zh": "是，我的爸爸有烟瘾，医生说他需要休息。"}, {"sp": "ming", "zh": "有烟瘾对健康不好，他应该休息。烟草税很高。"}, {"sp": "hong", "zh": "是，他昨天损失了他的手机，他很难过。"}, {"sp": "ming", "zh": "他的手机在哪儿？谁找到了他的手机？"}, {"sp": "hong", "zh": "是，服务员找到了他的手机，他很高兴。"}, {"sp": "ming", "zh": "好，他很高兴，你也很高兴，对吗？"}, {"sp": "hong", "zh": "是，我很高兴，我今天去看他。"}];
+var DLG_LINES = [{"sp": "ming", "zh": "小红，你今天穿红色的衣服，真显眼啊！"}, {"sp": "hong", "zh": "是吗？我很喜欢红色。对了，我今天特别高兴。"}, {"sp": "ming", "zh": "你为什么这么高兴？"}, {"sp": "hong", "zh": "我爸爸昨天损失了手机，他很难过。今天服务员打电话说，手机找到了！"}, {"sp": "ming", "zh": "太好了！服务员在哪儿找到的？"}, {"sp": "hong", "zh": "在饭店里。爸爸昨天在饭店吃饭，手机就忘在饭店了。"}, {"sp": "ming", "zh": "你爸爸现在高兴了吧？"}, {"sp": "hong", "zh": "他很高兴。他还说，他以后不抽烟了。"}, {"sp": "ming", "zh": "你爸爸有烟瘾吗？他抽烟的时间长吗？"}, {"sp": "hong", "zh": "有，他抽烟的时间很长。医生说，抽烟对健康不好，他应该不抽烟，好好休息。"}, {"sp": "ming", "zh": "现在烟草税很高，烟也很贵。他不抽烟，健康会更好。"}, {"sp": "hong", "zh": "你说得对，我现在就去看他，告诉他手机找到了，他一定很高兴啊！"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;

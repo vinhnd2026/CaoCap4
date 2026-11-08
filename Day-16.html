@@ -277,7 +277,7 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="flashNext()">Tiếp ➡</button>
 <button class="btn-sm" onclick="flashReshuffle()">🔀 Trộn lại</button>
 <span class="flash-count" id="flash-count"></span>
-</div></div>
+</div></div><style>#flash-wrap .flash-card{height:216px}#flash-wrap .flash-ex{margin-top:7px;font-size:1.02rem;line-height:2;color:#1e3a8a}#flash-wrap .flash-ex ruby rt{font-size:.52em;color:#2563eb}#flash-wrap .flash-ex-label{font-size:.8rem;font-weight:700;color:#64748b}#flash-wrap .flash-ex-vi{font-size:.86rem;color:#475569}</style>
 <div class="card">
 <h2>1. 才华 — cáihuá · tài hoa <span class="badge">Danh từ</span></h2>
 <div class="word-meaning">Nghĩa: <b>tài hoa, tài năng</b></div>
@@ -628,7 +628,7 @@ img, svg { max-width: 100%; }
 <div class="gram-intro">
 <div><b>Công thức:</b> 要不是 + A，就 + B</div>
 <div>要不是…就… nghĩa là “nếu không phải là… thì…”: dùng để nói về một chuyện đã xảy ra trong quá khứ, rồi giả thiết ngược lại xem nếu không có chuyện đó thì đã ra sao. Vế đầu dùng 要不是 để nói điều kiện ngược với sự thật, vế sau dùng 就 để nói kết quả giả thiết. Anh nhớ: vế sau phải có 就, không được bỏ 就. Lỗi hay gặp là quên 就 ở vế sau, làm câu mất đi ý giả thiết. So với câu điều kiện nói về tương lai, 要不是…就… nói về chuyện đã xảy ra rồi, nên vế sau thường nói một kết quả đã không xảy ra.</div>
-<div class="gram-mistake"><div><b>⚠️ Lỗi thường gặp:</b> <span style="color:#b91c1c">✗ 要不是你提醒我，我就错过预订。</span> → <span style="color:#15803d">✓ 要不是你提醒我，我就错过预订了。</span></div><div>要不是…就… 说已经发生的事，后半句要用 了。</div></div>
+<div class="gram-mistake"><div><b>⚠️ Lỗi thường gặp:</b> <span style="color:#b91c1c">✗ 要不是你提醒我，我就错过预订。</span> → <span style="color:#15803d">✓ 要不是你提醒我，我就错过预订了。</span></div><div>要不是…就… 说已经发生的事，后半句通常有 了；没有 了 也能懂，但不够完整。</div></div>
 </div>
 <div class="sub" style="margin-bottom:8px;">Nghe 4 ví dụ rồi làm 2 bài tập dưới đây:</div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('要不是他来，我就去睡觉。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>要<rt>Yào</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>来<rt>lái</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>觉<rt>jiào</rt></ruby>。</span> <span class="hint">(Nếu không phải anh ấy đến thì tôi đã đi ngủ.)</span></div>
@@ -746,7 +746,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>🎧 Bài 8: Nghe hội thoại – Suy luận <span class="badge">Nghe hiểu Cao cấp 4</span></h2>
-<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (7 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: 小红很有才华，正在策划 hát múa, tin rằng quảng bá có thể thổi bùng phong trào hát.</div>
+<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (12 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: Tiểu Hồng đang lên kế hoạch cho hoạt động của công ty, cô có tài và muốn làm thật lòng, không thổi phồng.</div>
 <div class="reading-box">
 <div class="reading-Controls dlg-controls-row">
 <span class="hint">Tốc độ:</span>
@@ -759,52 +759,57 @@ img, svg { max-width: 100%; }
 </div>
 <div id="dlg-voice-pickers" style="margin-top:8px;"><span class="hint">Đang kiểm tra giọng đọc trên thiết bị…</span></div>
 <div class="hint" id="dlg-voice-note" style="margin-top:4px;"></div>
-<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button></div>
+<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button> <button class="tts-btn" onclick="playDlgLine(8)">9</button> <button class="tts-btn" onclick="playDlgLine(9)">10</button> <button class="tts-btn" onclick="playDlgLine(10)">11</button> <button class="tts-btn" onclick="playDlgLine(11)">12</button></div>
 <div class="dlg-script" id="dlg-script" style="display:none">
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>策<rt>cè</rt></ruby><ruby>划<rt>huà</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>，<ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>，<ruby>还<rt>hái</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。</span><div class="dlg-vi">Tớ lên kế hoạch hát, nhảy múa, còn xem phim.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>才<rt>cái</rt></ruby><ruby>华<rt>huá</rt></ruby>。</span><div class="dlg-vi">Cậu thích hát, cậu rất có tài.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>才<rt>cái</rt></ruby><ruby>华<rt>huá</rt></ruby>。</span><div class="dlg-vi">Đúng, tớ thích hát, tớ rất có tài.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>炒<rt>Chǎo</rt></ruby><ruby>作<rt>zuò</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>催<rt>cuī</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Quảng bá rầm rộ có thể thúc đẩy việc hát không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>可<rt>Kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby>，<ruby>炒<rt>chǎo</rt></ruby><ruby>作<rt>zuò</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>催<rt>cuī</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>。</span><div class="dlg-vi">Có thể, quảng bá rầm rộ có thể thúc đẩy việc hát.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>策<rt>cè</rt></ruby><ruby>划<rt>huà</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>，<ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Ngày mai cậu lên kế hoạch hát, nhảy múa à?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>策<rt>cè</rt></ruby><ruby>划<rt>huà</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>，<ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>。</span><div class="dlg-vi">Đúng, ngày mai tớ lên kế hoạch hát, nhảy múa.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>hóng</rt></ruby>，<ruby>公<rt>gōng</rt></ruby><ruby>司<rt>sī</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>月<rt>yuè</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>活<rt>huó</rt></ruby><ruby>动<rt>dòng</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>策<rt>cè</rt></ruby><ruby>划<rt>huà</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby><ruby>了<rt>le</rt></ruby>？</span><div class="dlg-vi">Tiểu Hồng, hoạt động tháng sau của công ty, cậu lên kế hoạch thế nào rồi?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>策<rt>cè</rt></ruby><ruby>划<rt>huà</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>差<rt>chà</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>多<rt>duō</rt></ruby><ruby>了<rt>le</rt></ruby>。</span><div class="dlg-vi">Tớ lên kế hoạch gần xong rồi.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>真<rt>zhēn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>才<rt>cái</rt></ruby><ruby>华<rt>huá</rt></ruby>，<ruby>活<rt>huó</rt></ruby><ruby>动<rt>dòng</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>做<rt>zuò</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。</span><div class="dlg-vi">Cậu thật có tài, hoạt động nào cũng làm rất tốt.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>谢<rt>Xiè</rt></ruby><ruby>谢<rt>xie</rt></ruby>！<ruby>这<rt>Zhè</rt></ruby><ruby>次<rt>cì</rt></ruby><ruby>活<rt>huó</rt></ruby><ruby>动<rt>dòng</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>做<rt>zuò</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>样<rt>yàng</rt></ruby>。</span><div class="dlg-vi">Cảm ơn! Hoạt động lần này, tớ muốn làm khác đi.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>听<rt>Tīng</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>炒<rt>chǎo</rt></ruby><ruby>作<rt>zuò</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>次<rt>cì</rt></ruby><ruby>活<rt>huó</rt></ruby><ruby>动<rt>dòng</rt></ruby>，<ruby>是<rt>shì</rt></ruby><ruby>真<rt>zhēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Nghe nói có người muốn thổi phồng hoạt động lần này, có thật không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>可<rt>kě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>同<rt>tóng</rt></ruby><ruby>意<rt>yì</rt></ruby>。<ruby>炒<rt>Chǎo</rt></ruby><ruby>作<rt>zuò</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>活<rt>huó</rt></ruby><ruby>动<rt>dòng</rt></ruby><ruby>做<rt>zuò</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>大<rt>dà</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>自<rt>zì</rt></ruby><ruby>然<rt>rán</rt></ruby><ruby>会<rt>huì</rt></ruby><ruby>来<rt>lái</rt></ruby>。</span><div class="dlg-vi">Đúng, nhưng tớ không đồng ý. Thổi phồng không tốt, hoạt động làm tốt, mọi người tự nhiên sẽ đến.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>得<rt>dé</rt></ruby><ruby>对<rt>duì</rt></ruby>。<ruby>活<rt>Huó</rt></ruby><ruby>动<rt>dòng</rt></ruby><ruby>做<rt>zuò</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>就<rt>jiù</rt></ruby><ruby>能<rt>néng</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>燃<rt>rán</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>热<rt>rè</rt></ruby><ruby>情<rt>qíng</rt></ruby><ruby>啊<rt>a</rt></ruby>！</span><div class="dlg-vi">Cậu nói đúng. Hoạt động làm tốt, sẽ thắp lên nhiệt huyết của mọi người!</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>是<rt>Shì</rt></ruby>，<ruby>活<rt>huó</rt></ruby><ruby>动<rt>dòng</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>能<rt>néng</rt></ruby><ruby>催<rt>cuī</rt></ruby><ruby>生<rt>shēng</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>会<rt>huì</rt></ruby>，<ruby>公<rt>gōng</rt></ruby><ruby>司<rt>sī</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>能<rt>néng</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>新<rt>xīn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby>。</span><div class="dlg-vi">Ừ, hoạt động còn có thể sinh ra cơ hội mới, công ty cũng có thể có bạn bè mới.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>活<rt>Huó</rt></ruby><ruby>动<rt>dòng</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>候<rt>hou</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>帮<rt>bāng</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>做<rt>zuò</rt></ruby><ruby>吧<rt>ba</rt></ruby>。</span><div class="dlg-vi">Khi hoạt động, tớ giúp cậu cùng làm nhé.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>有<rt>Yǒu</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>帮<rt>bāng</rt></ruby><ruby>我<rt>wǒ</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>就<rt>jiù</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>累<rt>lèi</rt></ruby><ruby>了<rt>le</rt></ruby>。</span><div class="dlg-vi">Được! Có cậu giúp tớ, tớ sẽ không mệt nữa.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>活<rt>Huó</rt></ruby><ruby>动<rt>dòng</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>名<rt>míng</rt></ruby><ruby>字<rt>zì</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Tên hoạt động cậu nghĩ xong chưa?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>想<rt>Xiǎng</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>就<rt>jiù</rt></ruby><ruby>叫<rt>jiào</rt></ruby>“<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>家<rt>jiā</rt></ruby>”。<ruby>你<rt>Nǐ</rt></ruby><ruby>早<rt>zǎo</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>来<rt>lái</rt></ruby><ruby>呀<rt>ya</rt></ruby>！</span><div class="dlg-vi">Nghĩ xong rồi, tên là &quot;Ngôi nhà của chúng ta&quot;. Cậu đến sớm một chút nhé!</div></div>
 </div>
 <div class="hint" id="dlg-tip">💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.</div>
 </div>
 <div class="q-item" id="dlg-1">
-<div><b>Câu 1.</b> 小红今天策划什么？</div>
+<div><b>Câu 1.</b> 谁策划公司的活动？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：我策划唱歌，跳舞，还有看电影。')">A. 工作</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：我策划唱歌，跳舞，还有看电影。')">B. 学习</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：我策划唱歌，跳舞，还有看电影。')">C. 旅行</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小红：我策划唱歌，跳舞，还有看电影。')">D. 唱歌，跳舞</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小明：小红，公司下个月的活动，你策划得怎么样了？')">A. 小红的爸爸</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小明：小红，公司下个月的活动，你策划得怎么样了？')">B. 小红</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小明：小红，公司下个月的活动，你策划得怎么样了？')">C. 小红的老师</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小明：小红，公司下个月的活动，你策划得怎么样了？')">D. 小明</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-2">
-<div><b>Câu 2.</b> 小红有才华吗？</div>
+<div><b>Câu 2.</b> 小明说小红怎么样？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小红：是，我喜欢唱歌，我很有才华。')">A. 有</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：是，我喜欢唱歌，我很有才华。')">B. 不知道</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：是，我喜欢唱歌，我很有才华。')">C. 没有</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：是，我喜欢唱歌，我很有才华。')">D. 她很忙</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小明：你真有才华，活动都做得很好。')">A. 她很有才华</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：你真有才华，活动都做得很好。')">B. 她很累</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：你真有才华，活动都做得很好。')">C. 她很忙</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：你真有才华，活动都做得很好。')">D. 她不喜欢活动</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-3">
-<div><b>Câu 3.</b> 炒作可以催生唱歌吗？</div>
+<div><b>Câu 3.</b> 小红同意炒作活动吗？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：可以，炒作可以催生唱歌。')">A. 不可以</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：可以，炒作可以催生唱歌。')">B. 不知道</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小红：可以，炒作可以催生唱歌。')">C. 可以</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：可以，炒作可以催生唱歌。')">D. 她很忙</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：是，可是我不同意。炒作不好，活动做得好，大家自然会来。')">A. 她不知道</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：是，可是我不同意。炒作不好，活动做得好，大家自然会来。')">B. 她想炒作</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小红：是，可是我不同意。炒作不好，活动做得好，大家自然会来。')">C. 她不同意</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小红：是，可是我不同意。炒作不好，活动做得好，大家自然会来。')">D. 她同意</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-4">
-<div><b>Câu 4.</b> 小红明天策划唱歌吗？</div>
+<div><b>Câu 4.</b> 活动还能带来什么？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：是，我明天策划唱歌，跳舞。')">A. 工作</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小红：是，我明天策划唱歌，跳舞。')">B. 策划唱歌，跳舞</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：是，我明天策划唱歌，跳舞。')">C. 看手机</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：是，我明天策划唱歌，跳舞。')">D. 学习</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：是，活动还能催生新的机会，公司也能有新的朋友。')">A. 新的工作</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：是，活动还能催生新的机会，公司也能有新的朋友。')">B. 新的房子</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小红：是，活动还能催生新的机会，公司也能有新的朋友。')">C. 新的手机</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小红：是，活动还能催生新的机会，公司也能有新的朋友。')">D. 新的机会</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -852,7 +857,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 5 (Đoạn văn):</b> 才华 → 策划 → 炒作 → 催生 → 点燃</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 要不是他有才华，就没有人喜欢他，可是有人炒作他，他想策划一个学习的时间，学习才华。<br>2. 他策划了这个，可是这个催生了那个，他点燃了这个，朋友说，才华很重要，我们要学习。<br>3. 要不是他策划了这个，就没有人喜欢他，可是他点燃了大家的热情，大家都很喜欢他。<br>4. 要不是朋友呼吁他，他就没有时间学习，可是他很有才华，大家都喜欢他。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. A — 唱歌，跳舞 &nbsp;|&nbsp; 2. A — 一个唱歌的活动 &nbsp;|&nbsp; 3. D — 大家的热情</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 唱歌，跳舞 &nbsp; 2. A — 有 &nbsp; 3. C — 可以 &nbsp; 4. B — 策划唱歌，跳舞</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. B — 小红 &nbsp; 2. A — 她很有才华 &nbsp; 3. C — 她不同意 &nbsp; 4. D — 新的机会</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -972,20 +977,20 @@ var ITEM_INFO = {
     "D — 大家的热情"
   ],
   "dlg-1": [
-    "Nghe hội thoại 1 (小红今天策划什么？)",
-    "唱歌，跳舞"
+    "Nghe hội thoại 1 (谁策划公司的活动？)",
+    "小红"
   ],
   "dlg-2": [
-    "Nghe hội thoại 2 (小红有才华吗？)",
-    "有"
+    "Nghe hội thoại 2 (小明说小红怎么样？)",
+    "她很有才华"
   ],
   "dlg-3": [
-    "Nghe hội thoại 3 (炒作可以催生唱歌吗？)",
-    "可以"
+    "Nghe hội thoại 3 (小红同意炒作活动吗？)",
+    "她不同意"
   ],
   "dlg-4": [
-    "Nghe hội thoại 4 (小红明天策划唱歌吗？)",
-    "策划唱歌，跳舞"
+    "Nghe hội thoại 4 (活动还能带来什么？)",
+    "新的机会"
   ],
   "py-1": [
     "Pinyin: 才华",
@@ -4123,7 +4128,7 @@ restore();
 </script>
 <script>
 // ====== Flashcard ôn tập (mọi từ đã học các ngày trước; chiều thẻ ngẫu nhiên) ======
-var FLASH_DATA = [{"word": "媒介", "pinyin": "méijiè", "hanviet": "môi giới", "meaning": "phương tiện truyền thông; môi giới, trung gian"}, {"word": "密切", "pinyin": "mìqiè", "hanviet": "mật thiết", "meaning": "mật thiết, khăng khít"}, {"word": "配件", "pinyin": "pèijiàn", "hanviet": "phối kiện", "meaning": "phụ kiện, linh kiện"}, {"word": "侵入", "pinyin": "qīnrù", "hanviet": "xâm nhập", "meaning": "xâm nhập"}, {"word": "轻而易举", "pinyin": "qīng'éryìjǔ", "hanviet": "khinh nhi dị cử", "meaning": "dễ dàng, dễ như trở bàn tay"}, {"word": "全民", "pinyin": "quánmín", "hanviet": "toàn dân", "meaning": "toàn dân"}, {"word": "入侵", "pinyin": "rùqīn", "hanviet": "nhập xâm", "meaning": "xâm nhập, xâm lược"}, {"word": "受罪", "pinyin": "shòuzuì", "hanviet": "thụ tội", "meaning": "chịu khổ, chịu tội"}, {"word": "疏远", "pinyin": "shūyuǎn", "hanviet": "sơ viễn", "meaning": "xa cách, xa lánh"}, {"word": "数字化", "pinyin": "shùzìhuà", "hanviet": "số tự hóa", "meaning": "số hóa; chuyển đổi số"}, {"word": "统一", "pinyin": "tǒngyī", "hanviet": "thống nhất", "meaning": "thống nhất"}, {"word": "无形中", "pinyin": "wúxíngzhōng", "hanviet": "vô hình trung", "meaning": "một cách vô hình, không hay biết"}, {"word": "业内人士", "pinyin": "yènèirénshì", "hanviet": "nghiệp nội nhân sĩ", "meaning": "người trong ngành"}, {"word": "业余", "pinyin": "yèyú", "hanviet": "nghiệp dư", "meaning": "nghiệp dư, ngoài giờ"}, {"word": "依赖", "pinyin": "yīlài", "hanviet": "y lại", "meaning": "dựa vào, phụ thuộc"}, {"word": "一刀切", "pinyin": "yìdāoqiē", "hanviet": "nhất đao thiết", "meaning": "áp dụng một cách cứng nhắc, đồng loạt"}, {"word": "争分夺秒", "pinyin": "zhēngfēn-duómiǎo", "hanviet": "tranh phân đoạt miểu", "meaning": "tranh từng phút từng giây"}, {"word": "皱纹", "pinyin": "zhòuwén", "hanviet": "trứu văn", "meaning": "nếp nhăn"}, {"word": "标配", "pinyin": "biāopèi", "hanviet": "tiêu phối", "meaning": "cấu hình tiêu chuẩn"}, {"word": "不经意", "pinyin": "bùjīngyì", "hanviet": "bất kinh ý", "meaning": "vô tình, không để ý"}];
+var FLASH_DATA = [{"word": "媒介", "pinyin": "méijiè", "hanviet": "môi giới", "meaning": "phương tiện truyền thông; môi giới, trung gian", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>媒<rt>méi</rt></ruby><ruby>介<rt>jiè</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>那<rt>nà</rt></ruby>。", "exv": "Phương tiện này ở đó."}, {"word": "密切", "pinyin": "mìqiè", "hanviet": "mật thiết", "meaning": "mật thiết, khăng khít", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>伴<rt>bàn</rt></ruby><ruby>侣<rt>lǚ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>密<rt>mì</rt></ruby><ruby>切<rt>qiè</rt></ruby>。", "exv": "Tôi và bạn đời rất thân thiết."}, {"word": "配件", "pinyin": "pèijiàn", "hanviet": "phối kiện", "meaning": "phụ kiện, linh kiện", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>配<rt>pèi</rt></ruby><ruby>件<rt>jiàn</rt></ruby>。", "exv": "Tôi có phụ kiện này."}, {"word": "侵入", "pinyin": "qīnrù", "hanviet": "xâm nhập", "meaning": "xâm nhập", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>侵<rt>qīn</rt></ruby><ruby>入<rt>rù</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>那<rt>nà</rt></ruby>。", "exv": "Anh ấy đã xâm nhập vào đó."}, {"word": "轻而易举", "pinyin": "qīng'éryìjǔ", "hanviet": "khinh nhi dị cử", "meaning": "dễ dàng, dễ như trở bàn tay", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>轻<rt>qīng</rt></ruby><ruby>而<rt>ér</rt></ruby><ruby>易<rt>yì</rt></ruby><ruby>举<rt>jǔ</rt></ruby>。", "exv": "Việc này đối với anh ấy dễ như trở bàn tay."}, {"word": "全民", "pinyin": "quánmín", "hanviet": "toàn dân", "meaning": "toàn dân", "exr": "<ruby>全<rt>Quán</rt></ruby><ruby>民<rt>mín</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>呼<rt>hū</rt></ruby><ruby>吁<rt>yù</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby>。", "exv": "Toàn dân đều kêu gọi điều này."}, {"word": "入侵", "pinyin": "rùqīn", "hanviet": "nhập xâm", "meaning": "xâm nhập, xâm lược", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>入<rt>rù</rt></ruby><ruby>侵<rt>qīn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>那<rt>nà</rt></ruby>。", "exv": "Họ đã xâm nhập vào đó."}, {"word": "受罪", "pinyin": "shòuzuì", "hanviet": "thụ tội", "meaning": "chịu khổ, chịu tội", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>受<rt>shòu</rt></ruby><ruby>罪<rt>zuì</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>很<rt>hěn</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>适<rt>shì</rt></ruby>。", "exv": "Anh ấy đã chịu khổ, rất khó chịu."}, {"word": "疏远", "pinyin": "shūyuǎn", "hanviet": "sơ viễn", "meaning": "xa cách, xa lánh", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>疏<rt>shū</rt></ruby><ruby>远<rt>yuǎn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。", "exv": "Anh ấy đã xa lánh tôi."}, {"word": "数字化", "pinyin": "shùzìhuà", "hanviet": "số tự hóa", "meaning": "số hóa; chuyển đổi số", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>数<rt>shù</rt></ruby><ruby>字<rt>zì</rt></ruby><ruby>化<rt>huà</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby>。", "exv": "Chúng tôi đã số hóa cái này."}, {"word": "统一", "pinyin": "tǒngyī", "hanviet": "thống nhất", "meaning": "thống nhất", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>统<rt>tǒng</rt></ruby><ruby>一<rt>yī</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby>。", "exv": "Chúng tôi đã thống nhất cái này."}, {"word": "无形中", "pinyin": "wúxíngzhōng", "hanviet": "vô hình trung", "meaning": "một cách vô hình, không hay biết", "exr": "<ruby>无<rt>Wú</rt></ruby><ruby>形<rt>xíng</rt></ruby><ruby>中<rt>zhōng</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>疏<rt>shū</rt></ruby><ruby>远<rt>yuǎn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。", "exv": "Một cách vô hình, anh ấy đã xa lánh tôi."}, {"word": "业内人士", "pinyin": "yènèirénshì", "hanviet": "nghiệp nội nhân sĩ", "meaning": "người trong ngành", "exr": "<ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>业<rt>yè</rt></ruby><ruby>内<rt>nèi</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>士<rt>shì</rt></ruby>。", "exv": "Hôm nay có người trong ngành."}, {"word": "业余", "pinyin": "yèyú", "hanviet": "nghiệp dư", "meaning": "nghiệp dư, ngoài giờ", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>嗜<rt>shì</rt></ruby><ruby>好<rt>hào</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>业<rt>yè</rt></ruby><ruby>余<rt>yú</rt></ruby>。", "exv": "Sở thích của anh ấy rất nghiệp dư."}, {"word": "依赖", "pinyin": "yīlài", "hanviet": "y lại", "meaning": "dựa vào, phụ thuộc", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>依<rt>yī</rt></ruby><ruby>赖<rt>lài</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。", "exv": "Anh ấy dựa vào tôi."}, {"word": "一刀切", "pinyin": "yìdāoqiē", "hanviet": "nhất đao thiết", "meaning": "áp dụng một cách cứng nhắc, đồng loạt", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>刀<rt>dāo</rt></ruby><ruby>切<rt>qiē</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>极<rt>jí</rt></ruby><ruby>端<rt>duān</rt></ruby>。", "exv": "Cách làm một nhát dao này rất cực đoan."}, {"word": "争分夺秒", "pinyin": "zhēngfēn-duómiǎo", "hanviet": "tranh phân đoạt miểu", "meaning": "tranh từng phút từng giây", "exr": "<ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>争<rt>zhēng</rt></ruby><ruby>分<rt>fēn</rt></ruby><ruby>夺<rt>duó</rt></ruby><ruby>秒<rt>miǎo</rt></ruby>。", "exv": "Hôm nay chúng tôi tranh từng phút từng giây."}, {"word": "皱纹", "pinyin": "zhòuwén", "hanviet": "trứu văn", "meaning": "nếp nhăn", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>皱<rt>zhòu</rt></ruby><ruby>纹<rt>wén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>显<rt>xiǎn</rt></ruby><ruby>眼<rt>yǎn</rt></ruby>。", "exv": "Nếp nhăn của anh ấy rất dễ thấy."}, {"word": "标配", "pinyin": "biāopèi", "hanviet": "tiêu phối", "meaning": "cấu hình tiêu chuẩn", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>标<rt>biāo</rt></ruby><ruby>配<rt>pèi</rt></ruby>。", "exv": "Tôi có cấu hình tiêu chuẩn này."}, {"word": "不经意", "pinyin": "bùjīngyì", "hanviet": "bất kinh ý", "meaning": "vô tình, không để ý", "exr": "<ruby>不<rt>Bù</rt></ruby><ruby>经<rt>jīng</rt></ruby><ruby>意<rt>yì</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>疏<rt>shū</rt></ruby><ruby>远<rt>yuǎn</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>我<rt>wǒ</rt></ruby>。", "exv": "Vô tình, anh ấy đã xa lánh tôi."}];
 var flashDeck = [], flashIdx = 0;
 function flashShuffleDeck() {
   flashDeck = FLASH_DATA.map(function (w) { return { w: w, hanziFront: Math.random() < 0.5 }; });
@@ -4137,11 +4142,11 @@ function flashRender() {
   var cur = flashDeck[flashIdx], w = cur.w;
   var front = document.getElementById('flash-front'), back = document.getElementById('flash-back');
   if (cur.hanziFront) {
-    front.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Nghĩa</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-hanzi">' + w.word + '</div>';
+    back.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   } else {
-    front.innerHTML = '<div class="flash-tag">Nghĩa tiếng Việt</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div>';
+    back.innerHTML = '<div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   }
   document.getElementById('flash-card').classList.remove('flipped');
   document.getElementById('flash-count').textContent = 'Thẻ ' + (flashIdx + 1) + ' / ' + flashDeck.length;
@@ -4166,7 +4171,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
-var DLG_LINES = [{"sp": "hong", "zh": "我策划唱歌，跳舞，还有看电影。"}, {"sp": "ming", "zh": "你喜欢唱歌，你很有才华。"}, {"sp": "hong", "zh": "是，我喜欢唱歌，我很有才华。"}, {"sp": "ming", "zh": "炒作可以催生唱歌吗？"}, {"sp": "hong", "zh": "可以，炒作可以催生唱歌。"}, {"sp": "ming", "zh": "你明天策划唱歌，跳舞吗？"}, {"sp": "hong", "zh": "是，我明天策划唱歌，跳舞。"}];
+var DLG_LINES = [{"sp": "ming", "zh": "小红，公司下个月的活动，你策划得怎么样了？"}, {"sp": "hong", "zh": "我策划得差不多了。"}, {"sp": "ming", "zh": "你真有才华，活动都做得很好。"}, {"sp": "hong", "zh": "谢谢！这次活动，我想做得不一样。"}, {"sp": "ming", "zh": "听说有人想炒作这次活动，是真的吗？"}, {"sp": "hong", "zh": "是，可是我不同意。炒作不好，活动做得好，大家自然会来。"}, {"sp": "ming", "zh": "你说得对。活动做好了，就能点燃大家的热情啊！"}, {"sp": "hong", "zh": "是，活动还能催生新的机会，公司也能有新的朋友。"}, {"sp": "ming", "zh": "活动的时候，我帮你一起做吧。"}, {"sp": "hong", "zh": "好！有你帮我，我就不累了。"}, {"sp": "ming", "zh": "活动的名字你想好了吗？"}, {"sp": "hong", "zh": "想好了，就叫“我们的家”。你早点儿来呀！"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;
